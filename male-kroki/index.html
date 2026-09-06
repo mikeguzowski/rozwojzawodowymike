@@ -13,7 +13,7 @@
   <meta property="og:image" content="Resources/pmp28_wroclaw_0060_9229-scaled-1.jpg">
   <meta property="og:url" content="https://rozwojzawodowymike.pl/">
   <link rel="canonical" href="https://rozwojzawodowymike.pl/">
-  <link rel="icon" type="image/png" href="Resources/Hiperaktywny%20Mike_Logo-13.png">
+  <link rel="icon" type="image/png" href="../Resources/Hiperaktywny%20Mike_Logo-13.png">
   <title>Rozwój Zawodowy Małymi Krokami</title>
   <script type="application/ld+json" id="structuredData"></script>
   <script>
@@ -149,6 +149,11 @@
     #opinie + .section-tight { padding-top: 0; }
     #opinie + .section-tight .testimonial-grid { margin-top: 0; }
     .video-frame { width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: 16px; background: var(--cp-surface-soft); }
+    .workshop-intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, .72fr); gap: 30px; align-items: center; }
+    .workshop-photo { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 16px; display: block; }
+    .meeting-cta { position: relative; overflow: hidden; background-image: url("../Resources/0328-emarketing2025-DSC06217-eventshooters-pl-hires-Large.jpg"); background-size: cover; background-position: center; }
+    .meeting-cta::before { content: ""; position: absolute; inset: 0; background: var(--cp-overlay); opacity: .82; }
+    .meeting-cta > .wrap { position: relative; z-index: 1; }
     #warsztat-spotkanie .section-heading { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; max-width: none; align-items: stretch; }
     #warsztat-spotkanie .section-heading > .eyebrow, #warsztat-spotkanie .section-heading > h2 { grid-column: 1 / -1; }
     #warsztat-spotkanie .section-heading > p:nth-of-type(2), #warsztat-spotkanie .section-heading > p:nth-of-type(3) { margin: 0; padding: 22px; border: 1px solid var(--cp-border); border-radius: 16px; background: var(--cp-bg-elevated); box-shadow: 0 0 2px var(--cp-sheen), 0 1px 2px var(--cp-sheen); }
@@ -203,12 +208,13 @@
     @media (max-width: 900px) { #warsztat-spotkanie .panel ul { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
     @media (max-width: 650px) { .footer-inner { grid-template-columns: 1fr; gap: 28px; padding: 42px 0; } .footer-note { grid-column: auto; } }
     @media (max-width: 650px) { .nav { width: min(100% - 24px, 1180px); min-height: 68px; align-items: flex-start; padding: 14px 0; } .nav-links { gap: 0; } .nav-links a, .theme-toggle { padding: 5px 7px; font-size: .78rem; } .brand > span:last-child { max-width: 180px; white-space: normal; line-height: 1.15; } .wrap { width: min(100% - 28px, 1180px); } .section, .hero { padding: 58px 0; } .hero::after { opacity: .5; } .cards, .cards.two, .cards.four, .testimonial-grid, #warsztat-spotkanie .section-heading, #warsztat-spotkanie .panel ul, #warsztat-spotkanie #cases ~ .case { grid-template-columns: 1fr; } .featured-testimonial { grid-template-columns: 1fr; } .panel, .dark-card { padding: 22px; } h1 { font-size: clamp(2.7rem, 14vw, 4.7rem); } .profile { gap: 24px; } }
+    @media (max-width: 650px) { .workshop-intro { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
   <header class="site-header">
     <nav class="nav" aria-label="Główna nawigacja">
-      <a class="brand" href="index.html"><img class="brand-mark" src="Resources/Hiperaktywny%20Mike_Logo-13.png" alt="Hiperaktywny Mike"><span>Rozwój Zawodowy Małymi Krokami</span></a>
+      <a class="brand" href="../o-mnie/index.html"><img class="brand-mark" src="../Resources/Hiperaktywny%20Mike_Logo-13.png" alt="Hiperaktywny Mike"><span>Rozwój Zawodowy Małymi Krokami</span></a>
       <div class="nav-links">
         <button class="theme-toggle" id="themeToggle" type="button" aria-label="Przełącz motyw">◐</button>
       </div>
@@ -334,6 +340,32 @@
         if (!dagmaraHeading.parentElement.querySelector(".testimonial-link")) dagmaraHeading.insertAdjacentHTML("afterend", '<p><a class="testimonial-link" href="https://www.linkedin.com/in/dagmaraanuszczyk" target="_blank" rel="noopener">Dagmara Anuszczyk na LinkedIn ↗</a></p>');
       }
     }
+    function enhanceMeetingImages() {
+      if (pathRoute !== "male-kroki") return;
+      const hero = document.querySelector(".hero");
+      const booking = document.querySelector("#gotowy");
+      const workshop = document.querySelector("#warsztat-spotkanie");
+      if (hero) {
+        const portrait = hero.querySelector(".portrait");
+        if (portrait) {
+          portrait.src = `${imageBase}Mike.png`;
+          portrait.alt = "Mike Guzowski";
+        }
+      }
+      if (booking) booking.classList.add("meeting-cta");
+      if (workshop && !workshop.querySelector(".workshop-intro")) {
+        const heading = workshop.querySelector(".section-heading");
+        const intro = document.createElement("div");
+        intro.className = "workshop-intro";
+        const image = document.createElement("img");
+        image.className = "workshop-photo";
+        image.src = `${imageBase}Picture1.jpg`;
+        image.alt = "Mike Guzowski podczas pracy warsztatowej";
+        image.loading = "lazy";
+        heading?.parentNode.insertBefore(intro, heading);
+        if (heading) intro.append(heading, image);
+      }
+    }
     const extraTestimonials = () => `<section class="section-tight"><div class="wrap"><div class="testimonial-grid"><article class="panel testimonial"><div class="testimonial-head"><img class="testimonial-avatar" src="${imageBase}1659522300724.jpg" alt="Damian Maczuga"><div><h3 class="testimonial-name">Damian Maczuga</h3><p class="testimonial-role">IT Architect</p></div></div><div class="rating">★★★★★</div><blockquote>„Dzięki niemu, a wręcz z jego nakazu wykonałem jeden z najważniejszych telefonów w moim życiu, który nauczył mnie więcej życia niż chyba całe studia.”</blockquote></article><article class="panel testimonial"><div class="testimonial-head"><img class="testimonial-avatar" src="${imageBase}1668867175923.jpg" alt="Katarzyna Szwarc-Pawłowska"><div><h3 class="testimonial-name">Katarzyna Szwarc-Pawłowska</h3><p class="testimonial-role">UX&amp;UI Designer</p></div></div><div class="rating">★★★★★</div><blockquote>„Dzięki rozmowie z Mikiem odłożyłam na bok idealistyczne wyobrażenia i cele, a dostrzegłam możliwości, które były już obok mnie.”</blockquote></article><article class="panel testimonial"><div class="testimonial-head"><img class="testimonial-avatar" src="${imageBase}1651610859426.jpg" alt="Michał Ankiersztajn"><div><h3 class="testimonial-name">Michał Ankiersztajn</h3><p class="testimonial-role">Senior Android Developer</p></div></div><div class="rating">★★★★★</div><blockquote>„Dzięki wspólnym sesjom nauczyłem się lepiej planować i wdrażać eksperymenty, decydować co warto zrobić, a czego lepiej nie ruszać, maksymalizować revenue.”</blockquote></article><article class="panel testimonial"><div class="testimonial-head"><img class="testimonial-avatar" src="${imageBase}1729432485460.jpg" alt="Tudor Tise"><div><h3 class="testimonial-name">Tudor Tise</h3><p class="testimonial-role">co-Founder Rito Kids</p></div></div><div class="rating">★★★★★</div><blockquote>„Mike brought his critical thinking and experience to identify various aspects in our project that needed to be improved.”</blockquote></article><article class="panel testimonial"><div class="testimonial-head"><img class="testimonial-avatar" src="${imageBase}1728648244686_square.jpg" alt="Filip Pawłowski"><div><h3 class="testimonial-name">Filip Pawłowski</h3><p class="testimonial-role">Software Engineer @Snowflake</p></div></div><div class="rating">★★★★★</div><blockquote>„Realizowaliśmy zadania dotyczące samorozwoju, o których czytałem, ale nigdy nie mogłem się zmotywować, żeby zrobić samemu.”</blockquote></article></div></div></section>`;
     const fullHomePage = () => pageShell(`
       <section class="hero"><div class="wrap hero-grid"><div><p class="eyebrow">Rozwój zawodowy · mentoring · decyzje</p><div class="rating">★★★★★ <span style="color:var(--cp-text-muted);font-size:.9rem;letter-spacing:0">Dołącz do 100+ zadowolonych klientów</span></div><h1>Rozwój Zawodowy Małymi Krokami</h1><p class="lead">Pomagam analitycznym umysłom ogarnąć chaos i doprowadzam ich do podjęcia ważnej decyzji zawodowej i biznesowej.</p><div class="actions"><a class="button" href="#gotowy">Porozmawiajmy <span>→</span></a><a class="button secondary" href="#workstyle">Zobacz jak pracuję</a><a class="button secondary" href="#cases">Zobacz case studies</a></div></div><div><img class="portrait" src="${imageBase}pmp28_wroclaw_0060_9229-scaled-1.jpg" alt="Mike Guzowski"><p class="quote">„Jeśli szukasz mentora, który łączy własne doświadczenie, ciekawość drugiego człowieka i różne narzędzia rozwojowe, a przy tym podchodzi do współpracy po ludzku i bez budowania dystansu „eksperta”, zdecydowanie warto skorzystać z mentoringu u Michała.”<br><strong>- Monika B., HR Manager</strong></p></div></div></section>
@@ -410,8 +442,8 @@
       if (key === "spotkanie") reorderPersonalMeeting();
       enhanceWorkshop();
       enhanceTestimonials();
+      enhanceMeetingImages();
       updatePathLinks();
-      if (pathRoute === "o-mnie") document.querySelector(".footer-column:nth-child(2)")?.remove();
       if (key === "spotkanie") {
         const bookingUrl = "https://outlook.office.com/book/Spotkanie@hiperaktywnymike.pl/s/qyAEgZlkcU-xhXVQFp6COQ2?ismsaljsauthenabled";
         document.querySelectorAll('a.button[href^="mailto:"], a.button[href="#gotowy"]').forEach((link) => { link.href = bookingUrl; link.target = "_blank"; link.rel = "noopener"; });
