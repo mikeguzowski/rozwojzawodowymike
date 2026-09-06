@@ -228,7 +228,7 @@
     </nav>
   </header>
   <main id="app"></main>
-  <footer class="footer"><div class="wrap footer-inner"><section class="footer-column"><h2>Gdzie mnie znaleźć</h2><a href="https://www.linkedin.com/in/michalguzowski/" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.goodreads.com/" target="_blank" rel="noopener">Goodreads</a><a href="https://substack.com/@hiperaktywnymike" target="_blank" rel="noopener">Substack</a></section><section class="footer-column"><h2>Quick Links</h2><a data-route="o-mnie" href="o-mnie/">Kim jestem?</a><a data-route="male-kroki" data-fragment="cases-reordered" href="male-kroki/#cases-reordered">Warsztat i przykłady</a><a data-route="male-kroki" data-fragment="opinie" href="male-kroki/#opinie">Opinie</a><a data-route="male-kroki" data-fragment="FAQ" href="male-kroki/#FAQ">FAQ</a><a data-route="privacy" href="privacy/">Polityka prywatności i cookies</a></section><section class="footer-column"><h2>Kontakt</h2><span>Masz pytania?</span><span>Skontaktuj się ze mną: <a href="mailto:kontakt@hiperaktywnymike.pl">kliknij tutaj</a></span></section><div class="footer-note">© Rozwój Zawodowy Małymi Krokami</div></div></footer>
+  <footer class="footer"><div class="wrap footer-inner"><section class="footer-column"><h2>Gdzie mnie znaleźć</h2><a href="https://www.linkedin.com/in/michalguzowski/" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.goodreads.com/" target="_blank" rel="noopener">Goodreads</a><a href="https://substack.com/@hiperaktywnymike" target="_blank" rel="noopener">Substack</a></section><section class="footer-column"><h2>Quick Links</h2><a data-route="o-mnie" href="../o-mnie/index.html">Kim jestem?</a><a data-fragment="company-cases" href="#company-cases">Case studies dla firm</a><a data-route="male-kroki" data-fragment="opinie" href="../male-kroki/index.html#opinie">Opinie</a><a data-route="male-kroki" data-fragment="FAQ" href="../male-kroki/index.html#FAQ">FAQ</a><a data-route="privacy" href="../privacy/index.html">Polityka prywatności i cookies</a></section><section class="footer-column"><h2>Kontakt</h2><span>Masz pytania?</span><span>Skontaktuj się ze mną: <a href="mailto:kontakt@hiperaktywnymike.pl">kliknij tutaj</a></span></section><div class="footer-note">© Rozwój Zawodowy Małymi Krokami</div></div></footer>
   <script>
     const pathRoute = location.pathname.match(/\/(o-mnie|male-kroki|firma|privacy)\/(?:index\.html)?$/)?.[1];
     const imageBase = pathRoute ? "../Resources/" : "Resources/";
@@ -450,6 +450,10 @@
     function render() {
       const pathKey = pathRoute === "male-kroki" ? "spotkanie" : pathRoute;
       const key = location.hash.replace("#", "") || pathKey || "home";
+      if (pathRoute === "firma" && key === "company-cases" && document.querySelector("#company-cases")) {
+        document.querySelector("#company-cases").scrollIntoView({ behavior: "smooth" });
+        return;
+      }
       const page = pages[key] || pages.home;
       document.querySelector("#app").innerHTML = page();
       updateSeo(pages[key] ? key : "home");
