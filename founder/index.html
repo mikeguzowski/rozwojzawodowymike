@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Michał „Mike” Guzowski - inżynier, przedsiębiorca, mentor i doradca. Pomagam specjalistom, managerom i founderom podejmować trafniejsze decyzje zawodowe i biznesowe.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="author" content="Michał „Mike” Guzowski">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:title" content="Michał „Mike” Guzowski | Rozwój zawodowy małymi krokami">
+  <meta property="og:description" content="Mentoring, decyzje zawodowe i biznesowe oraz praktyczne wsparcie dla specjalistów, managerów i founderów.">
+  <meta property="og:image" content="Resources/pmp28_wroclaw_0060_9229-scaled-1.jpg">
+  <meta property="og:url" content="https://rozwojzawodowymike.pl/">
+  <link rel="canonical" href="https://rozwojzawodowymike.pl/">
+  <link rel="icon" type="image/png" href="../Resources/Hiperaktywny%20Mike_Logo-13.png">
+  <title>Rozwój Zawodowy Małymi Krokami</title>
+  <script type="application/ld+json" id="structuredData"></script>
+  <script>
+    (() => {
+      const param = new URLSearchParams(window.location.search).get("scoutTheme");
+      const theme =
+        param || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      --cp-bg: #f7f4ef;
+      --cp-bg-elevated: #fcfbf8;
+      --cp-surface: #ffffff;
+      --cp-surface-soft: #f5f5f5;
+      --cp-border: #dedede;
+      --cp-border-strong: #919191;
+      --cp-text: #242424;
+      --cp-text-muted: #5c5c5c;
+      --cp-text-soft: #6f6f6f;
+      --cp-accent: #4267c8;
+      --cp-accent-hover: #3455aa;
+      --cp-accent-soft: rgba(66, 103, 200, 0.1);
+      --cp-accent-fg: #ffffff;
+      --cp-success: #16a34a;
+      --cp-danger: #dc2626;
+      --cp-warning: #f59e0b;
+      --cp-link: #0078d4;
+      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.12);
+      --cp-overlay: rgba(255, 255, 255, 0.8);
+      --cp-panel: rgba(255, 255, 255, 0.86);
+      --cp-panel-strong: rgba(255, 255, 255, 0.96);
+      --cp-sheen: rgba(255, 255, 255, 0.55);
+      --cp-highlight: rgba(66, 103, 200, 0.14);
+    }
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --cp-bg: #3d3b3a;
+      --cp-bg-elevated: #343231;
+      --cp-surface: #292929;
+      --cp-surface-soft: #2e2e2e;
+      --cp-border: #474747;
+      --cp-border-strong: #5f5f5f;
+      --cp-text: #dedede;
+      --cp-text-muted: #919191;
+      --cp-text-soft: #b0b0b0;
+      --cp-accent: #90aaf5;
+      --cp-accent-hover: #aec0ff;
+      --cp-accent-soft: rgba(144, 170, 245, 0.14);
+      --cp-accent-fg: #1a1a1a;
+      --cp-success: #4ade80;
+      --cp-danger: #f87171;
+      --cp-warning: #fbbf24;
+      --cp-link: #4da6ff;
+      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.32);
+      --cp-overlay: rgba(41, 41, 41, 0.88);
+      --cp-panel: rgba(41, 41, 41, 0.72);
+      --cp-panel-strong: rgba(41, 41, 41, 0.96);
+      --cp-sheen: rgba(255, 255, 255, 0.04);
+      --cp-highlight: rgba(144, 170, 245, 0.14);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--cp-bg); color: var(--cp-text); font-family: "Segoe UI", Aptos, Calibri, -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.65; }
+    a { color: var(--cp-link); }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    button { font: inherit; }
+    .site-header { position: sticky; top: 0; z-index: 20; background: var(--cp-panel-strong); border-bottom: 1px solid var(--cp-border); backdrop-filter: blur(18px); }
+    .nav { width: min(1180px, calc(100% - 40px)); margin: auto; min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { color: var(--cp-text); text-decoration: none; display: flex; align-items: center; gap: 12px; min-width: 0; font-weight: 800; letter-spacing: -0.03em; }
+    .brand > span:last-child { white-space: nowrap; }
+    .brand-mark { width: 44px; height: 44px; display: block; flex: 0 0 44px; object-fit: contain; }
+    .nav-links { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+    .nav-links a, .theme-toggle { color: var(--cp-text-muted); text-decoration: none; padding: 8px 12px; border-radius: 10px; border: 0; background: transparent; cursor: pointer; font-size: .92rem; }
+    .nav-links a:hover, .nav-links a.active, .theme-toggle:hover { color: var(--cp-accent); background: var(--cp-accent-soft); }
+    .page { animation: appear .45s ease both; }
+    @keyframes appear { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+    .wrap { width: min(1180px, calc(100% - 40px)); margin: auto; }
+    .section { padding: 90px 0; }
+    .section-tight { padding: 52px 0; }
+    .hero { padding: 82px 0 76px; position: relative; overflow: hidden; }
+    .hero::after { content: ""; position: absolute; width: 420px; height: 420px; right: -180px; top: -120px; border: 1px solid var(--cp-highlight); border-radius: 50%; box-shadow: 0 0 0 42px var(--cp-accent-soft), 0 0 0 84px var(--cp-highlight); pointer-events: none; }
+    .hero-grid, .split { display: grid; grid-template-columns: 1.08fr .92fr; gap: 66px; align-items: center; }
+    .eyebrow { margin: 0 0 18px; color: var(--cp-accent); font-size: .76rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+    h1, h2, h3, h4 { line-height: 1.08; letter-spacing: -0.045em; margin: 0 0 20px; }
+    h1 { max-width: 760px; font-size: clamp(2.8rem, 7vw, 6.1rem); }
+    h2 { font-size: clamp(2rem, 4vw, 3.5rem); }
+    h3 { font-size: 1.38rem; }
+    h4 { font-size: 1.1rem; }
+    .lead { max-width: 680px; font-size: clamp(1.1rem, 2vw, 1.35rem); color: var(--cp-text-muted); }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 46px; padding: 10px 18px; border-radius: 10px; border: 1px solid var(--cp-accent); background: var(--cp-accent); color: var(--cp-accent-fg); text-decoration: none; font-weight: 750; cursor: pointer; }
+    .button:hover { background: var(--cp-accent-hover); border-color: var(--cp-accent-hover); }
+    .button.secondary { background: transparent; color: var(--cp-text); border-color: var(--cp-border-strong); }
+    .button.secondary:hover { color: var(--cp-accent); border-color: var(--cp-accent); }
+    .portrait { width: min(100%, 480px); aspect-ratio: 1; object-fit: cover; border-radius: 48% 48% 12px 48%; display: block; background: var(--cp-accent-soft); box-shadow: var(--cp-shadow); }
+    .image-missing { visibility: hidden; }
+    .rating { color: var(--cp-warning); letter-spacing: .15em; font-size: 1.2rem; }
+    .quote { margin: 0; padding: 26px 0 26px 28px; border-left: 5px solid var(--cp-accent); color: var(--cp-text-muted); font-size: 1.06rem; }
+    .band { background: var(--cp-text); color: var(--cp-surface); }
+    .band p, .band li { color: var(--cp-surface-soft); }
+    .band h2, .band h3 { color: var(--cp-surface); }
+    .section-heading { max-width: 760px; margin-bottom: 40px; }
+    .section-heading.center { text-align: center; margin-left: auto; margin-right: auto; }
+    .section-heading p { color: var(--cp-text-muted); font-size: 1.08rem; }
+    .band .section-heading p { color: var(--cp-surface-soft); }
+    .panel { background: var(--cp-surface); border: 1px solid var(--cp-border); border-radius: 16px; padding: 30px; box-shadow: 0 0 2px var(--cp-sheen), 0 1px 2px var(--cp-sheen); }
+    .panel.soft { background: var(--cp-bg-elevated); }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .cards.four { grid-template-columns: repeat(4, 1fr); }
+    .cards.two { grid-template-columns: repeat(2, 1fr); }
+    .card-kicker { color: var(--cp-accent); font-weight: 800; font-size: .76rem; letter-spacing: .12em; text-transform: uppercase; }
+    .card-icon { display: grid; place-items: center; width: 50px; height: 50px; margin-bottom: 22px; border: 1px solid var(--cp-accent); border-radius: 16px; color: var(--cp-accent); font-size: 1.35rem; }
+    .clean-list { padding-left: 1.15rem; margin: 14px 0 0; }
+    .clean-list li { margin: 10px 0; }
+    .case { padding: 24px 0; border-top: 1px solid var(--cp-border); }
+    .case:first-child { border-top: 0; padding-top: 0; }
+    .dark-card { background: var(--cp-bg-elevated); border: 1px solid var(--cp-border); border-radius: 16px; padding: 30px; }
+    .dark-card p, .dark-card li { color: var(--cp-text-muted); }
+    .price { font-size: 2rem; font-weight: 850; letter-spacing: -0.04em; }
+    .price-list { display: grid; gap: 10px; padding: 0; list-style: none; }
+    .price-list li { display: flex; justify-content: space-between; gap: 20px; padding-bottom: 10px; border-bottom: 1px solid var(--cp-border); }
+    .testimonial-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .testimonial { display: flex; flex-direction: column; gap: 18px; }
+    .testimonial-head { display: flex; align-items: center; gap: 14px; }
+    .testimonial-avatar { width: 64px; height: 64px; flex: 0 0 64px; object-fit: cover; border-radius: 50%; background: var(--cp-accent-soft); }
+    .testimonial-name { margin: 0; font-size: 1rem; letter-spacing: -0.02em; }
+    .testimonial-role { margin: 2px 0 0; color: var(--cp-text-muted); font-size: .82rem; line-height: 1.3; }
+    .testimonial blockquote { margin: 0; color: var(--cp-text-muted); font-size: .98rem; }
+    .testimonial .rating { font-size: .9rem; letter-spacing: .08em; }
+    #opinie + .section-tight { padding-top: 0; }
+    #opinie + .section-tight .testimonial-grid { margin-top: 0; }
+    .video-frame { width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: 16px; background: var(--cp-surface-soft); }
+    .workshop-intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, .72fr); gap: 30px; align-items: center; }
+    .workshop-photo { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 16px; display: block; }
+    .meeting-cta { position: relative; overflow: hidden; background-image: url("../Resources/0328-emarketing2025-DSC06217-eventshooters-pl-hires-Large.jpg"); background-size: cover; background-position: center; }
+    .meeting-cta::before { content: ""; position: absolute; inset: 0; background: var(--cp-overlay); opacity: .82; }
+    .meeting-cta > .wrap { position: relative; z-index: 1; }
+    #warsztat-spotkanie .section-heading { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; max-width: none; align-items: stretch; }
+    #warsztat-spotkanie .section-heading > .eyebrow, #warsztat-spotkanie .section-heading > h2 { grid-column: 1 / -1; }
+    #warsztat-spotkanie .section-heading > p:nth-of-type(2), #warsztat-spotkanie .section-heading > p:nth-of-type(3) { margin: 0; padding: 22px; border: 1px solid var(--cp-border); border-radius: 16px; background: var(--cp-bg-elevated); box-shadow: 0 0 2px var(--cp-sheen), 0 1px 2px var(--cp-sheen); }
+    #warsztat-spotkanie .section-heading > p:nth-of-type(2)::before, #warsztat-spotkanie .section-heading > p:nth-of-type(3)::before { display: block; margin-bottom: 8px; color: var(--cp-accent); font-size: .74rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    #warsztat-spotkanie .section-heading > p:nth-of-type(2)::before { content: "Moja kariera"; }
+    #warsztat-spotkanie .section-heading > p:nth-of-type(3)::before { content: "Mój styl"; }
+    #warsztat-spotkanie .section-heading > p:nth-of-type(4) { grid-column: 1 / -1; margin: 14px 0 0; color: var(--cp-text-muted); font-size: .82rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    #warsztat-spotkanie .panel ul { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 0; padding: 0; list-style: none; }
+    #warsztat-spotkanie .panel li { min-height: 86px; margin: 0; padding: 18px; border: 1px solid var(--cp-border); border-radius: 10px; background: var(--cp-bg-elevated); }
+    #warsztat-spotkanie .section-heading > .achievements-heading { grid-column: 1 / -1; margin: 14px 0 0; color: var(--cp-text-muted); font-size: .82rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    #warsztat-spotkanie .section-heading > .achievements-heading::before { content: none !important; }
+    #warsztat-spotkanie #cases ~ .case { display: grid; grid-template-columns: minmax(220px, .42fr) minmax(0, 1fr); gap: 30px; align-items: start; padding: 30px 0; }
+    #warsztat-spotkanie #cases ~ .case h3 { margin: 0; font-size: 1.3rem; }
+    #warsztat-spotkanie #cases ~ .case p { max-width: 720px; margin: 0; color: var(--cp-text-muted); }
+    .case-studies-section .case { display: grid; grid-template-columns: minmax(220px, .42fr) minmax(0, 1fr); gap: 30px; align-items: start; padding: 30px 0; border-top: 1px solid var(--cp-border); }
+    .case-studies-section .case:first-of-type { border-top: 0; padding-top: 0; }
+    .case-studies-section .case h3 { margin: 0; font-size: 1.3rem; }
+    .case-studies-section .case p { max-width: 720px; margin: 0; color: var(--cp-text-muted); }
+    .featured-testimonial { display: grid; grid-template-columns: auto 1fr; gap: 22px; align-items: center; }
+    .featured-testimonial .testimonial-avatar { width: 88px; height: 88px; flex-basis: 88px; }
+    .flow-block { margin: 0; padding: 22px; border: 1px solid var(--cp-border); border-radius: 16px; background: var(--cp-bg-elevated); box-shadow: 0 0 2px var(--cp-sheen), 0 1px 2px var(--cp-sheen); }
+    .flow-label { margin: 0 0 14px; color: var(--cp-accent); font-size: .74rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .flow-diagram { display: flex; align-items: center; gap: 9px; flex-wrap: wrap; }
+    .flow-node { display: inline-flex; align-items: center; min-height: 34px; padding: 7px 11px; border: 1px solid var(--cp-border-strong); border-radius: 10px; background: var(--cp-surface); color: var(--cp-text); font-size: .92rem; font-weight: 700; line-height: 1.25; }
+    .flow-arrow { color: var(--cp-accent); font-size: 1.1rem; font-weight: 800; }
+    .achievement-label { display: inline-block; margin-bottom: 9px; padding: 4px 8px; border-radius: 999px; background: var(--cp-accent-soft); color: var(--cp-accent); font-size: .7rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    .testimonial-link { display: inline-flex; align-items: center; margin-left: 6px; color: var(--cp-link); font-size: .82rem; font-weight: 700; text-decoration: none; white-space: nowrap; }
+    .testimonial-link:hover { color: var(--cp-accent); }
+    .faq { border-top: 1px solid var(--cp-border); }
+    .faq-item { border-bottom: 1px solid var(--cp-border); }
+    .faq-question { width: 100%; padding: 20px 0; display: flex; justify-content: space-between; gap: 18px; text-align: left; border: 0; background: transparent; color: var(--cp-text); cursor: pointer; font-weight: 750; }
+    .faq-question span:last-child { color: var(--cp-accent); font-size: 1.4rem; line-height: 1; }
+    .faq-answer { display: none; padding: 0 42px 20px 0; color: var(--cp-text-muted); }
+    .faq-item.open .faq-answer { display: block; }
+    .faq-item.open .faq-question span:last-child { transform: rotate(45deg); }
+    .profile { display: grid; grid-template-columns: 300px 1fr; gap: 48px; align-items: center; }
+    .profile img { width: 100%; aspect-ratio: 1; object-fit: cover; background: var(--cp-accent-soft); border-radius: 50% 50% 12px 50%; }
+    .socials { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 24px; }
+    .socials a { color: var(--cp-text); font-weight: 700; }
+    .footer { padding: 30px 0; border-top: 1px solid var(--cp-border); color: var(--cp-text-muted); font-size: .9rem; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    .footer-inner { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 42px; padding: 56px 0; }
+    .footer-column { display: grid; align-content: start; gap: 10px; }
+    .footer-column h2 { margin: 0 0 8px; color: var(--cp-text); font-size: 1rem; letter-spacing: -0.02em; }
+    .footer-column a { width: fit-content; color: var(--cp-text-muted); text-decoration: none; }
+    .footer-column a:hover { color: var(--cp-accent); }
+    .footer-note { grid-column: 1 / -1; padding-top: 20px; border-top: 1px solid var(--cp-border); font-size: .82rem; }
+    .policy { max-width: 820px; margin: auto; }
+    .policy h2 { font-size: 2rem; margin-top: 46px; }
+    .empty { padding: 100px 0; text-align: center; }
+    @media (max-width: 900px) { .hero-grid, .split, .profile { grid-template-columns: 1fr; gap: 36px; } .hero-grid .portrait { max-width: 520px; } .cards.four, .testimonial-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 900px) { #warsztat-spotkanie .panel ul { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 650px) { .footer-inner { grid-template-columns: 1fr; gap: 28px; padding: 42px 0; } .footer-note { grid-column: auto; } }
+    @media (max-width: 650px) { .nav { width: min(100% - 24px, 1180px); min-height: 68px; align-items: flex-start; padding: 14px 0; } .nav-links { gap: 0; } .nav-links a, .theme-toggle { padding: 5px 7px; font-size: .78rem; } .brand > span:last-child { max-width: 180px; white-space: normal; line-height: 1.15; } .wrap { width: min(100% - 28px, 1180px); } .section, .hero { padding: 58px 0; } .hero::after { opacity: .5; } .cards, .cards.two, .cards.four, .testimonial-grid, #warsztat-spotkanie .section-heading, #warsztat-spotkanie .panel ul, #warsztat-spotkanie #cases ~ .case { grid-template-columns: 1fr; } .featured-testimonial { grid-template-columns: 1fr; } .panel, .dark-card { padding: 22px; } h1 { font-size: clamp(2.7rem, 14vw, 4.7rem); } .profile { gap: 24px; } }
+    @media (max-width: 650px) { .workshop-intro { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Główna nawigacja">
+      <a class="brand" href="../o-mnie/index.html"><img class="brand-mark" src="../Resources/Hiperaktywny%20Mike_Logo-13.png" alt="Hiperaktywny Mike"><span>Rozwój Zawodowy Małymi Krokami</span></a>
+      <div class="nav-links">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Przełącz motyw">◐</button>
+      </div>
+    </nav>
+  </header>
+  <main id="app"></main>
+  <footer class="footer"><div class="wrap footer-inner"><section class="footer-column"><h2>Gdzie mnie znaleźć</h2><a href="https://www.linkedin.com/in/michalguzowski/" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.goodreads.com/" target="_blank" rel="noopener">Goodreads</a><a href="https://substack.com/@hiperaktywnymike" target="_blank" rel="noopener">Substack</a></section><section class="footer-column"><h2>Quick Links</h2><a data-route="o-mnie" href="../o-mnie/index.html">Kim jestem?</a><a data-route="founder" data-fragment="cases" href="#cases">Warsztat i przykłady</a><a data-route="founder" data-fragment="opinie" href="#opinie">Opinie</a><a data-route="founder" data-fragment="FAQ" href="#FAQ">FAQ</a><a data-route="privacy" href="../privacy/index.html">Polityka prywatności i cookies</a></section><section class="footer-column"><h2>Kontakt</h2><span>Masz pytania?</span><span>Skontaktuj się ze mną: <a href="mailto:kontakt@hiperaktywnymike.pl">kliknij tutaj</a></span></section><div class="footer-note">© Rozwój Zawodowy Małymi Krokami</div></div></footer>
+  <script>
+    const pathRoute = location.pathname.match(/\/(o-mnie|founder|firma|privacy)\/(?:index\.html)?$/)?.[1];
+    const imageBase = pathRoute ? "../Resources/" : "Resources/";
+    const faq = (items) => `<div class="faq">${items.map(([q, a]) => `<div class="faq-item"><button class="faq-question" type="button"><span>${q}</span><span>+</span></button><div class="faq-answer"><p>${a}</p></div></div>`).join("")}</div>`;
+    const pageShell = (content) => `<div class="page">${content}</div>`;
+    const testimonials = () => `<section class="section" id="opinie"><div class="wrap"><div class="section-heading center"><p class="eyebrow">Głosy klientów</p><h2>Co zostaje po wspólnej pracy?</h2><p>Najlepszym podsumowaniem są rzeczy, które klienci zabrali ze sobą poza spotkanie.</p></div><div class="testimonial-grid"><article class="panel testimonial"><div class="testimonial-head"><img class="testimonial-avatar" src="${imageBase}1659522300724.jpg" alt="Monika B."><div><h3 class="testimonial-name">Monika B.</h3><p class="testimonial-role">HR Manager</p></div></div><div class="rating">★★★★★</div><blockquote>„Doceniam jego ciekawość drugiego człowieka, trafne obserwacje i umiejętność patrzenia głębiej niż tylko na to, co pojawia się na powierzchni.”</blockquote></article><article class="panel testimonial"><div class="testimonial-head"><img class="testimonial-avatar" src="${imageBase}1699865000881.jpg" alt="Magdalena Leymanczyk"><div><h3 class="testimonial-name">Magdalena Leymanczyk</h3><p class="testimonial-role">IT Manager</p></div></div><div class="rating">★★★★★</div><blockquote>„Nasz mentoring dużo mi dał - są takie kwestie z naszych rozmów, które do mnie teraz wracają w różnych momentach i pewnie niektóre zdania zostaną ze mną do końca życia.”</blockquote></article><article class="panel testimonial"><div class="testimonial-head"><img class="testimonial-avatar" src="${imageBase}1710758996364.jpg" alt="Jan Zubalewicz"><div><h3 class="testimonial-name">Jan Zubalewicz</h3><p class="testimonial-role">AI Engineer</p></div></div><div class="rating">★★★★★</div><blockquote>„Dzięki za różne ćwiczenia, co bardzo pomagało zrozumieć siebie - nie tylko poprzez mówienie, ale faktycznie zrobienie czegoś.”</blockquote></article><article class="panel testimonial"><div class="testimonial-head"><img class="testimonial-avatar" src="${imageBase}1776158768592.jpg" alt="Dagmara Anuszczyk"><div><h3 class="testimonial-name">Dagmara Anuszczyk</h3><p class="testimonial-role">Product &amp; business</p></div></div><div class="rating">★★★★★</div><blockquote>„Odłożyłam na bok idealistyczne wyobrażenia i cele, a dostrzegłam możliwości, które były już obok mnie, lecz nie byłam pewna ich sensowności.”</blockquote></article><article class="panel testimonial"><div class="testimonial-head"><img class="testimonial-avatar" src="${imageBase}1784582221750.png" alt="Marek Żylicz"><div><h3 class="testimonial-name">Marek Żylicz</h3><p class="testimonial-role">Architekt IT, psycholog</p></div></div><div class="rating">★★★★★</div><blockquote>„Mike udzielił mi istotnych wskazówek, które wzbogaciły mój warsztat i pomogły podjąć decyzje na temat przyszłej działalności.”</blockquote></article><article class="panel testimonial"><div class="testimonial-head"><img class="testimonial-avatar" src="${imageBase}1656090748183.jpg" alt="Piotr Wnuczek"><div><h3 class="testimonial-name">Piotr Wnuczek</h3><p class="testimonial-role">Software Engineer</p></div></div><div class="rating">★★★★★</div><blockquote>„Po każdej rozmowie miałem poczucie, że był to intensywnie wykorzystany, ale niezwykle wartościowy czas.”</blockquote></article></div></div></section>`;
+    const homePage = () => pageShell(`
+      <section class="hero"><div class="wrap hero-grid"><div><p class="eyebrow">Rozwój zawodowy · mentoring · decyzje</p><h1>Rozwój Zawodowy Małymi Krokami</h1><p class="lead">Pomagam specjalistom, liderom i osobom budującym własną drogę podejmować trafniejsze decyzje, porządkować złożone problemy i przekładać je na działanie.</p><div class="actions"><a class="button" href="#kontakt">Porozmawiajmy <span>→</span></a><a class="button secondary" href="#jak-pracuje">Zobacz jak pracuję</a></div></div><div><img class="portrait" src="${imageBase}Mike-1024x1024.png" alt="Mike Guzowski"><p class="quote">„Nie chodzi o to, żeby na spotkaniu było miło. Chodzi o to, żebyś widział sytuację wyraźniej, wiedział, co dalej i zrobił ruch.”</p></div></div></section>
+      <section class="section-tight"><div class="wrap"><div class="section-heading center"><p class="eyebrow">Może jesteś właśnie tutaj</p><h2>Być może zastanawiasz się...</h2></div><div class="cards two"><div class="panel"><ul class="clean-list"><li>Jak zrobić kolejny krok zawodowy?</li><li>Czy rozwijać się jako ekspert, czy wejść w rolę lidera?</li><li>Jak przeprowadzić trudną rozmowę z zespołem?</li><li>Jak stworzyć sobie warunki, w których możesz skutecznie pracować?</li></ul></div><div class="panel soft"><ul class="clean-list"><li>Jak się przebranżowić?</li><li>Czy pomysł ma sens biznesowo?</li><li>Jak poukładać firmę, którą budujesz?</li><li>Dlaczego uciekasz w detale zamiast robić to, co ważne?</li></ul></div></div></div></section>
+      <section class="section band"><div class="wrap"><div class="section-heading"><p class="eyebrow">Problem, o którym rzadko się mówi</p><h2>Samotność decyzyjna</h2><p>Im więcej zależy od Twoich decyzji, tym mniej osób możesz poprosić o prostą, szczerą perspektywę. Wspólnie wchodzimy w trudną decyzję bez potrzeby potwierdzania Twojej racji.</p></div><div class="cards three"><div class="dark-card"><p class="card-kicker">Sposób A</p><h3>Analiza problemu</h3><p>Zbieramy kolejne dane i scenariusze, aż decyzję podejmuje za nas czas, emocje, rynek albo ktoś inny.</p></div><div class="dark-card"><p class="card-kicker">Sposób B</p><h3>Działanie zbyt pochopne</h3><p>Napięcie związane z niepodjęciem decyzji staje się większe niż ryzyko błędu.</p></div><div class="dark-card"><p class="card-kicker">Sposób C</p><h3>Konsultacja AI</h3><p>AI pomaga analizować, ale nie zawsze pomaga się zatrzymać i skonfrontować z trudną prawdą.</p></div></div></div></section>
+      <section class="section" id="jak-pracuje"><div class="wrap"><div class="section-heading center"><p class="eyebrow">Mój sposób pracy</p><h2>Od chaosu do małego kroku</h2><p>Nie dostajesz gotowej recepty. Dostajesz lepszy ogląd sytuacji, decyzję i działanie, za które możesz wziąć odpowiedzialność.</p></div><div class="cards four"><div class="panel"><div class="card-icon">01</div><h3>Zrozumieć</h3><p>Szukamy źródła problemu i tego, co dziś najbardziej blokuje Cię przed ruchem.</p></div><div class="panel"><div class="card-icon">02</div><h3>Podważyć</h3><p>Sprawdzamy, czy założenia są faktami, lękiem, historią czy przyzwyczajeniem.</p></div><div class="panel"><div class="card-icon">03</div><h3>Uporządkować</h3><p>Porządkujemy opcje, ryzyka, priorytety oraz rzeczy, na które masz wpływ.</p></div><div class="panel"><div class="card-icon">04</div><h3>Zdecydować</h3><p>Przekładamy wnioski na eksperyment, rozmowę albo kolejny mały krok.</p></div></div></div></section>
+      <section class="section-tight band"><div class="wrap split"><div><p class="eyebrow">Co zostaje po spotkaniu?</p><h2>Coś, z czym możesz coś zrobić.</h2><p>Decyzja. Mapa rzeczywistego problemu. Trudna rozmowa. Nowa perspektywa. Konkretne „nie”.</p><a class="button" href="#kontakt">Umów bezpłatne spotkanie</a></div><div class="panel"><ul class="clean-list"><li>Decyzja</li><li>Mapa rzeczywistego problemu</li><li>Trudna rozmowa</li><li>Przeprowadzenie eksperymentu</li><li>Nowa perspektywa</li><li>Konkretne „nie”</li></ul></div></div></section>
+      <section class="section" id="warsztat"><div class="wrap"><div class="section-heading"><p class="eyebrow">Doświadczenie, które wnoszę</p><h2>Mój warsztat</h2><p>Programista, konsultant procesów biznesowych, lider IT, przedsiębiorca, mentor i wykładowca. Korzystam z doświadczeń, technik i narzędzi zależnie od potrzeb i okoliczności.</p></div><div class="cards two"><div class="panel"><h3>Ostatnie 10 lat</h3><ul class="clean-list"><li>Zbudowałem firmę z 4 mln rocznego obrotu</li><li>3-krotnie otrzymałem tytuł Microsoft MVP</li><li>Ukończyłem ½ Iron Man w czasie poniżej 5h</li><li>Utworzyłem autorski kierunek na Politechnice Warszawskiej</li><li>Zorganizowałem konferencję No Code dla 1000 osób</li></ul></div><div><div class="case"><h3>Case 1. „Czy naprawdę chcę zmienić pracę?”</h3><p>Oddzielenie realnej potrzeby zmiany od presji, wyobrażeń i zmęczenia obecną sytuacją. Rezultat: mały eksperyment zamiast gwałtownej decyzji.</p></div><div class="case"><h3>Case 2. Manager czy ekspert?</h3><p>Rozłożenie obu ścieżek na konsekwencje, ryzyka i możliwości, a następnie sprawdzenie roli managerskiej w praktyce.</p></div><div class="case"><h3>Case 3. Pomysł na biznes</h3><p>Praca nad tym, co naprawdę trzeba sprawdzić, zanim etat zostanie zamieniony na własną działalność.</p></div></div></div></div></section>
+      ${testimonials()}
+      <section class="section band" id="kontakt"><div class="wrap split"><div><p class="eyebrow">Pierwszy krok</p><h2>Jesteś gotowy na swój rozwój zawodowy?</h2><p>Umów bezpłatne, 60-minutowe spotkanie próbne. Bez presji na dalszą współpracę.</p><a class="button" href="mailto:kontakt@hiperaktywnymike.pl">Napisz do mnie</a></div><div class="dark-card"><p class="card-kicker">Cennik spotkań</p><ul class="price-list"><li><span>Spotkanie zapoznawcze</span><strong>0 PLN</strong></li><li><span>Jednorazowe</span><strong>500 PLN</strong></li><li><span>Pakiet 5 spotkań</span><strong>2000 PLN</strong></li><li><span>Dłuższa współpraca</span><strong>Do negocjacji</strong></li></ul><small>Ceny za 60 minut spotkania. Do kwot należy doliczyć VAT.</small></div></div></section>
+      <section class="section-tight"><div class="wrap"><div class="section-heading center"><p class="eyebrow">Najczęstsze pytania</p><h2>FAQ</h2></div>${faq([["Z jakim problemem mogę do Ciebie przyjść?", "Najczęściej pracuję z decyzjami dotyczącymi kariery, zarządzania, własnego biznesu i kolejnych kroków zawodowych."], ["Czy spotkanie próbne jest bezpłatne?", "Tak. Pierwsze spotkanie jest bezpłatne i nie zobowiązuje Cię do dalszej współpracy."], ["Ile trwa spotkanie próbne?", "Spotkanie próbne trwa 60 minut - tyle samo, co standardowe spotkanie."], ["Czy spotkanie odbywa się online?", "Tak. Spotkania próbne zawsze odbywają się online. Link do spotkania otrzymasz po dokonaniu rezerwacji."], ["Czy po spotkaniu muszę zdecydować się na współpracę?", "Nie. Po spotkaniu oboje powinniśmy wiedzieć, czy dalsza współpraca ma sens - bez presji na decyzję od razu."]])}</div></section>`);
+    const companyPage = () => pageShell(`<section class="hero"><div class="wrap hero-grid"><div><p class="eyebrow">Rozwój zawodowy w firmie</p><h1>Wesprzyj swoich ludzi w trudnych decyzjach.</h1><p class="lead">Pomagam managerom, liderom i specjalistom lepiej rozumieć sytuację, prowadzić trudne rozmowy i przekładać wnioski na działanie.</p><div class="actions"><a class="button" href="mailto:kontakt@hiperaktywnymike.pl">Porozmawiajmy o potrzebie</a><a class="button secondary" href="#firma-jak">Jak pracuję</a></div></div><div><img class="portrait" src="${imageBase}0328-emarketing2025-DSC06217-eventshooters-pl-hires-Large-1024x683.jpg" alt="Mike podczas wystąpienia"></div></div></section><section class="section" id="firma-jak"><div class="wrap"><div class="section-heading"><p class="eyebrow">Dla organizacji</p><h2>Decyzje, zarządzanie, sprzedaż i analiza.</h2><p>Wspieram osoby stojące przed wyzwaniami na każdym szczeblu zawodowym, na którym sam byłem.</p></div><div class="cards two"><div class="panel"><h3>Największe efekty osiągają</h3><ul class="clean-list"><li>managerzy i liderzy zmagający się z trudnościami</li><li>senior specjaliści wchodzący w nową rolę</li><li>osoby w rolach sprzedażowych mierzące się z presją</li><li>analityczne umysły z ADHD lub neuroatypowością</li></ul></div><div class="panel soft"><h3>Komu nie pomogę</h3><ul class="clean-list"><li>Osobom szukającym terapii, diagnozy lub leczenia.</li><li>Osobom, które chcą rozmowy, ale unikają decyzji i działania.</li><li>Osobom, które nie są gotowe na zmianę perspektywy.</li></ul></div></div></div></section><section class="section band"><div class="wrap"><div class="section-heading center"><p class="eyebrow">Praktyczny proces</p><h2>Zrozumieć. Podważyć. Uporządkować. Zdecydować.</h2></div><div class="cards three"><div class="dark-card"><h3>Manager utknął w operacyjce</h3><p>Analiza 4C i ABCDE pomogły oddzielić realne ograniczenia zespołu od przekonań o kontroli i odpowiedzialności.</p></div><div class="dark-card"><h3>HR i inżynierowie</h3><p>Więcej pytań, danych i wspólnego definiowania problemu zamiast gotowych rozwiązań.</p></div><div class="dark-card"><h3>Specjalista w presales</h3><p>Pętla OODA i model ABCDE pomogły połączyć analityczne mocne strony z celem rozmowy sprzedażowej.</p></div></div></div></section><section class="section" id="firma-kontakt"><div class="wrap split"><div><p class="eyebrow">Współpraca</p><h2>Co zostaje po spotkaniu?</h2><ul class="clean-list"><li>Decyzja i mapa rzeczywistego problemu</li><li>Plan trudnej rozmowy</li><li>Eksperyment do przeprowadzenia</li><li>Nowa perspektywa i konkretne „nie”</li></ul></div><div class="panel"><h3>Spotkanie zapoznawcze</h3><p>Porozmawiamy o sytuacji w firmie i sprawdzimy, czy i w jaki sposób mogę pomóc.</p><a class="button" href="mailto:kontakt@hiperaktywnymike.pl">Umów rozmowę</a></div></div></section>`);
+    const aboutPage = () => pageShell(`<section class="section"><div class="wrap profile"><img src="${imageBase}Mike-1024x1024.png" alt="Mike Guzowski"><div><p class="eyebrow">O mnie</p><h1>Hej, jestem Mike Guzowski.</h1><p class="lead">Jestem inżynierem, przedsiębiorcą, mentorem i wykładowcą na Politechnice Warszawskiej.</p><p>Lubię działać, dowozić i wspierać w tym innych. Pracowałem jako programista, konsultant procesów biznesowych, lider IT i przedsiębiorca. Dziś pomagam specjalistom, liderom i managerom podejmować trafniejsze decyzje oraz skutecznie działać pod presją.</p><div class="socials"><a href="https://www.linkedin.com/in/michalguzowski/">LinkedIn ↗</a><a href="https://substack.com/@hiperaktywnymike">Substack ↗</a></div></div></div></section><section class="section band"><div class="wrap"><div class="section-heading"><p class="eyebrow">Moja kariera</p><h2>Programista → Konsultant → Lider IT → Przedsiębiorca → Doradca</h2><p>Wnoszę do rozmowy doświadczenie z wielu środowisk, ale bez budowania dystansu „eksperta”.</p></div></div></section>`);
+    const privacyPage = () => pageShell(`<section class="section"><div class="wrap policy"><p class="eyebrow">Dokument formalny</p><h1>Polityka prywatności</h1><p>Czołem! Jeżeli tutaj trafiłeś, to niezawodny znak, że cenisz swoją prywatność. Poniżej znajdziesz zasady przetwarzania danych osobowych oraz wykorzystywania plików cookies.</p><p>Administratorem strony jest firma PurpleApps Michał Guzowski Consulting, Hajoty 53/1, 01-821 Warszawa, NIP: 9512331526.</p><p>W razie wątpliwości możesz skontaktować się pod adresem <a href="mailto:kontakt@hiperaktywnymike.pl">kontakt@hiperaktywnymike.pl</a>.</p><h2>Skrócona wersja - najważniejsze informacje</h2><p>Dbamy o Twoją prywatność, ale również o Twój czas.</p><ul class="clean-list"><li>Twoje dane pozostają poufne i bezpieczne.</li><li>Powierzamy przetwarzanie danych tylko sprawdzonym podmiotom.</li><li>Korzystamy z narzędzi analitycznych i marketingowych zgodnie z ustawieniami zgód.</li><li>Na stronie mogą być osadzane nagrania z YouTube i inne treści zewnętrzne.</li><li>Możesz zarządzać zgodami dotyczącymi plików cookies.</li></ul><h2>Dane osobowe</h2><p>RODO przyznaje Ci między innymi prawo dostępu do danych, ich sprostowania, usunięcia, ograniczenia przetwarzania oraz wniesienia sprzeciwu. W sprawach związanych z polityką prywatności napisz na adres kontaktowy.</p></div></section>`);
+    function enhanceWorkshop() {
+      const workshop = document.querySelector("#warsztat-spotkanie");
+      if (!workshop) return;
+      const repeatedWorkshopLabel = [...workshop.querySelectorAll(".section-heading > .eyebrow")].find((label) => label.textContent.trim() === "Warsztat");
+      if (repeatedWorkshopLabel) repeatedWorkshopLabel.remove();
+      const achievementsHeading = [...workshop.querySelectorAll(".section-heading > p")].find((paragraph) => paragraph.textContent.includes("Moje osiągnięcia"));
+      if (achievementsHeading) achievementsHeading.classList.add("achievements-heading");
+      const flowParagraphs = [...workshop.querySelectorAll(".section-heading > p")].filter((paragraph) => paragraph.textContent.includes("➡️"));
+      flowParagraphs.forEach((paragraph) => {
+        const [label, ...steps] = paragraph.textContent.split(":");
+        const nodes = steps.join(":").split("➡️").map((step) => step.trim()).filter(Boolean);
+        const block = document.createElement("div");
+        block.className = "flow-block";
+        block.innerHTML = `<p class="flow-label">${label.trim()}</p><div class="flow-diagram">${nodes.map((node, index) => `<span class="flow-node">${node}</span>${index < nodes.length - 1 ? '<span class="flow-arrow" aria-hidden="true">→</span>' : ""}`).join("")}</div>`;
+        paragraph.replaceWith(block);
+      });
+      workshop.querySelectorAll(".panel li").forEach((item) => {
+        const match = item.textContent.trim().match(/^\(([^)]+)\)\s*(.*)$/);
+        if (!match) return;
+        item.textContent = "";
+        const label = document.createElement("span");
+        label.className = "achievement-label";
+        label.textContent = match[1];
+        const description = document.createElement("span");
+        description.textContent = match[2];
+        item.append(label, description);
+      });
+    }
+    function reorderPersonalMeeting() {
+      const workshop = document.querySelector("#warsztat-spotkanie");
+      if (!workshop || document.querySelector("#cases-reordered")) return;
+      const casesHeading = workshop.querySelector("#cases");
+      if (!casesHeading) return;
+      const cases = [];
+      let next = casesHeading.nextElementSibling;
+      while (next && next.classList.contains("case")) {
+        const current = next;
+        next = next.nextElementSibling;
+        cases.push(current);
+      }
+      if (!cases.length) return;
+      const section = document.createElement("section");
+      section.className = "section case-studies-section";
+      section.id = "cases-reordered";
+      const wrap = document.createElement("div");
+      wrap.className = "wrap";
+      wrap.append(casesHeading, ...cases);
+      section.append(wrap);
+      workshop.parentElement.insertBefore(section, workshop);
+    }
+    function enhanceTestimonials() {
+      const links = {
+        "Monika B.": "https://www.linkedin.com/in/michalguzowski/details/recommendations/",
+        "Damian Maczuga": "https://www.linkedin.com/in/damianmaczuga/",
+        "Magdalena Leymanczyk": "https://www.linkedin.com/in/magdalena-leyma%C5%84czyk/",
+        "Jan Zubalewicz": "https://www.linkedin.com/in/janzubalewicz/",
+        "Katarzyna Szwarc-Pawłowska": "https://www.linkedin.com/in/katarzyna-szwarc-paw%C5%82owska-3a5b0a151/",
+        "Michał Ankiersztajn": "https://www.linkedin.com/in/micha%C5%82-ankiersztajn-365232217/",
+        "Tudor Tise": "https://www.linkedin.com/in/tudortise/",
+        "Marek Żylicz": "https://www.linkedin.com/in/marek-%C5%BCylicz/",
+        "Piotr Wnuczek": "https://www.linkedin.com/in/piotrwnuczekpl/",
+        "Filip Pawłowski": "https://www.linkedin.com/in/filip-pawlowski/"
+      };
+      document.querySelectorAll(".testimonial-name").forEach((name) => {
+        const url = links[name.textContent.trim()];
+        if (!url) return;
+        const avatar = name.closest(".testimonial")?.querySelector(".testimonial-avatar");
+        if (avatar && name.textContent.trim() === "Filip Pawłowski") avatar.src = `${imageBase}1684152357152.jpg`;
+        if (avatar && name.textContent.trim() === "Piotr Wnuczek") avatar.src = `${imageBase}1656090748183.jpg`;
+        if (name.textContent.trim() === "Monika B.") {
+          if (avatar) {
+            avatar.src = `${imageBase}placeholder-woman.png`;
+            avatar.alt = "Monika B.";
+          }
+        }
+        const link = document.createElement("a");
+        link.className = "testimonial-link";
+        link.href = url;
+        link.target = "_blank";
+        link.rel = "noopener";
+        link.textContent = "LinkedIn ↗";
+        name.append(link);
+      });
+      const piotr = document.querySelector("#opiniapiotra .eyebrow");
+      if (piotr) piotr.innerHTML = 'Opinia <a class="testimonial-link" href="https://www.linkedin.com/in/piotr-tyrakowski/" target="_blank" rel="noopener">Piotra Tyrakowskiego ↗</a>';
+      const dagmaraHeading = [...document.querySelectorAll("h2")].find((heading) => heading.textContent.includes("Jeśli szukasz mentora"));
+      if (dagmaraHeading) {
+        const card = dagmaraHeading.closest(".panel");
+        if (card && !card.querySelector(".testimonial-avatar")) {
+          card.classList.add("featured-testimonial");
+          const avatar = document.createElement("img");
+          avatar.className = "testimonial-avatar";
+          avatar.src = `${imageBase}1776158768592.jpg`;
+          avatar.alt = "Dagmara Anuszczyk";
+          card.insertBefore(avatar, card.firstChild);
+        }
+        if (!dagmaraHeading.parentElement.querySelector(".testimonial-link")) dagmaraHeading.insertAdjacentHTML("afterend", '<p><a class="testimonial-link" href="https://www.linkedin.com/in/dagmaraanuszczyk" target="_blank" rel="noopener">Dagmara Anuszczyk na LinkedIn ↗</a></p>');
+      }
+    }
+    function enhanceMeetingImages() {
+      if (pathRoute !== "founder") return;
+      const hero = document.querySelector(".hero");
+      const booking = document.querySelector("#gotowy");
+      const workshop = document.querySelector("#warsztat-spotkanie");
+      if (hero) {
+        const portrait = hero.querySelector(".portrait");
+        if (portrait) {
+          portrait.src = `${imageBase}Mike.png`;
+          portrait.alt = "Mike Guzowski";
+        }
+      }
+      if (booking) booking.classList.add("meeting-cta");
+      if (workshop && !workshop.querySelector(".workshop-intro")) {
+        const heading = workshop.querySelector(".section-heading");
+        const intro = document.createElement("div");
+        intro.className = "workshop-intro";
+        const image = document.createElement("img");
+        image.className = "workshop-photo";
+        image.src = `${imageBase}Picture1.jpg`;
+        image.alt = "Mike Guzowski podczas pracy warsztatowej";
+        image.loading = "lazy";
+        heading?.parentNode.insertBefore(intro, heading);
+        if (heading) intro.append(heading, image);
+      }
+    }
+    function applyCaseFormatting() {
+      if (pathRoute !== "founder") return;
+      const phrases = [
+        "problemem nie była sama firma, ale konkretne elementy obecnej roli",
+        "zaplanował mały eksperyment pozwalający sprawdzić część obowiązków managerskich przed trwałą zmianą roli",
+        "powstał prosty plan walidacji",
+        "wybraliśmy jeden eksperyment biznesowy na najbliższy okres",
+        "wybraliśmy te obszary z których warto zrezygnować"
+      ];
+      document.querySelectorAll(".case p").forEach((description) => {
+        phrases.forEach((phrase) => {
+          if (description.textContent.includes(phrase) && !description.innerHTML.includes(`<b>${phrase}</b>`)) {
+            description.innerHTML = description.innerHTML.replace(phrase, `<b>${phrase}</b>`);
+          }
+        });
+      });
+    }
+    const extraTestimonials = () => `<section class="section-tight"><div class="wrap"><div class="testimonial-grid"><article class="panel testimonial"><div class="testimonial-head"><img class="testimonial-avatar" src="${imageBase}1659522300724.jpg" alt="Damian Maczuga"><div><h3 class="testimonial-name">Damian Maczuga</h3><p class="testimonial-role">IT Architect</p></div></div><div class="rating">★★★★★</div><blockquote>„Dzięki niemu, a wręcz z jego nakazu wykonałem jeden z najważniejszych telefonów w moim życiu, który nauczył mnie więcej życia niż chyba całe studia.”</blockquote></article><article class="panel testimonial"><div class="testimonial-head"><img class="testimonial-avatar" src="${imageBase}1668867175923.jpg" alt="Katarzyna Szwarc-Pawłowska"><div><h3 class="testimonial-name">Katarzyna Szwarc-Pawłowska</h3><p class="testimonial-role">UX&amp;UI Designer</p></div></div><div class="rating">★★★★★</div><blockquote>„Dzięki rozmowie z Mikiem odłożyłam na bok idealistyczne wyobrażenia i cele, a dostrzegłam możliwości, które były już obok mnie.”</blockquote></article><article class="panel testimonial"><div class="testimonial-head"><img class="testimonial-avatar" src="${imageBase}1651610859426.jpg" alt="Michał Ankiersztajn"><div><h3 class="testimonial-name">Michał Ankiersztajn</h3><p class="testimonial-role">Senior Android Developer</p></div></div><div class="rating">★★★★★</div><blockquote>„Dzięki wspólnym sesjom nauczyłem się lepiej planować i wdrażać eksperymenty, decydować co warto zrobić, a czego lepiej nie ruszać, maksymalizować revenue.”</blockquote></article><article class="panel testimonial"><div class="testimonial-head"><img class="testimonial-avatar" src="${imageBase}1729432485460.jpg" alt="Tudor Tise"><div><h3 class="testimonial-name">Tudor Tise</h3><p class="testimonial-role">co-Founder Rito Kids</p></div></div><div class="rating">★★★★★</div><blockquote>„Mike brought his critical thinking and experience to identify various aspects in our project that needed to be improved.”</blockquote></article><article class="panel testimonial"><div class="testimonial-head"><img class="testimonial-avatar" src="${imageBase}1728648244686_square.jpg" alt="Filip Pawłowski"><div><h3 class="testimonial-name">Filip Pawłowski</h3><p class="testimonial-role">Software Engineer @Snowflake</p></div></div><div class="rating">★★★★★</div><blockquote>„Realizowaliśmy zadania dotyczące samorozwoju, o których czytałem, ale nigdy nie mogłem się zmotywować, żeby zrobić samemu.”</blockquote></article></div></div></section>`;
+    const fullHomePage = () => pageShell(`
+      <section class="hero"><div class="wrap hero-grid"><div><p class="eyebrow">Rozwój zawodowy · mentoring · decyzje</p><div class="rating">★★★★★ <span style="color:var(--cp-text-muted);font-size:.9rem;letter-spacing:0">Dołącz do 100+ zadowolonych klientów</span></div><h1>Rozwój Zawodowy Małymi Krokami</h1><p class="lead">Pomagam analitycznym umysłom ogarnąć chaos i doprowadzam ich do podjęcia ważnej decyzji zawodowej i biznesowej.</p><div class="actions"><a class="button" href="#gotowy">Porozmawiajmy <span>→</span></a><a class="button secondary" href="#workstyle">Zobacz jak pracuję</a><a class="button secondary" href="#cases">Zobacz case studies</a></div></div><div><img class="portrait" src="${imageBase}pmp28_wroclaw_0060_9229-scaled-1.jpg" alt="Mike Guzowski"><p class="quote">„Jeśli szukasz mentora, który łączy własne doświadczenie, ciekawość drugiego człowieka i różne narzędzia rozwojowe, a przy tym podchodzi do współpracy po ludzku i bez budowania dystansu „eksperta”, zdecydowanie warto skorzystać z mentoringu u Michała.”<br><strong>- Monika B., HR Manager</strong></p></div></div></section>
+      <section class="section-tight"><div class="wrap"><div class="panel soft"><div class="section-heading"><p class="eyebrow">Może jesteś właśnie tutaj</p><h2>Być może zastanawiasz się...</h2></div><div class="cards two"><ul class="clean-list"><li>Jak zrobić kolejny krok zawodowy?</li><li>Jak odbyć trudną rozmowę z zespołem?</li><li>Jak stworzyć sobie odpowiednie warunki pracy?</li><li>Jak się przebranżowić?</li></ul><ul class="clean-list"><li>Jak przejść z etatu na swoje?</li><li>Czy ten pomysł ma sens biznesowo?</li><li>Jak poukładać firmę, którą buduję? Co liczyć i jak mierzyć?</li><li><strong>Dlaczego poświęcam uwagę nieistotnym detalom, a uciekam od robienia tego co naprawdę ma znaczenie?</strong></li></ul></div><p><strong>Dokładnie na powyższe pytania pomagam odpowiedzieć moim klientom.</strong></p></div></div></section>
+      <section class="section band"><div class="wrap"><div class="section-heading"><p class="eyebrow">Problem, o którym rzadko się mówi</p><h2>Samotność decyzyjna</h2><p>Im więcej zależy od Twoich decyzji, tym mniej osób możesz poprosić o prostą, szczerą perspektywę. Nie dlatego, że brakuje Ci ludzi. Brakuje Ci kogoś, kto potrafi <strong>wejść z Tobą w trudną decyzję</strong> - bez własnego interesu, bez potrzeby potwierdzania Twojej racji i wnosząc własne doświadczenie.</p></div><h3>Jak sobie z nią (nie)radzimy?</h3><div class="cards three"><div class="dark-card"><p class="card-kicker">Sposób A</p><h3>Analiza problemu<br>(zbyt długa)</h3><p>Zbieramy kolejne dane, pytamy kolejne osoby, tworzymy następne scenariusze. Aż w końcu decyzję podejmuje za nas czas, emocje, rynek albo ktoś inny.</p></div><div class="dark-card"><p class="card-kicker">Sposób B</p><h3>Działanie<br>(zbyt pochopne)</h3><p>Podejmujemy decyzję, bo napięcie związane z jej niepodjęciem staje się większe niż ryzyko błędu. Liczymy, że „jakoś to będzie”, a później dopasowujemy rzeczywistość do podjętego kierunku.</p></div><div class="dark-card"><p class="card-kicker">Sposób C</p><h3>Konsultacja AI<br>(kiedy potrzebna trudna prawda)</h3><p>AI pomaga analizować, ale nie zawsze pomaga się zatrzymać. Nieraz zamiast konfrontować nas, pomaga lepiej uzasadnić nasze przekonania, wzmacniając błąd potwierdzenia.</p></div></div></div></section>
+      <section class="section"><div class="wrap split"><img class="portrait" src="${imageBase}pmp28_wroclaw_0060_9229-scaled-1.jpg" alt="Mike Guzowski"><div><p class="eyebrow">Kim jestem</p><h2>Hej, jestem Mike Guzowski</h2><p>Jestem inżynierem, przedsiębiorcą, mentorem i wykładowcą na Politechnice Warszawskiej.</p><p>Dziś wspieram osoby stojące przed podobnymi zawodowymi zmianami. Wspieram specjalistów, liderów i managerów w podejmowaniu trafniejszych decyzji, lepszym rozumieniu siebie oraz skutecznym działaniu pod presją. Prywatnie jestem mężem i ojcem dwóch małych piłkarzy.</p><p><strong>Moja kariera:</strong> Programista → Konsultant Procesów Biznesowych → Lider IT → Przedsiębiorca → Doradca</p></div></div></section>
+      <section class="section band"><div class="wrap split"><div><p class="eyebrow">Dlaczego ludzie przychodzą właśnie do mnie?</p><h2>Łączę doświadczenie z inżynierskim sposobem myślenia.</h2><p>Szukam mechanizmów i zależności, sprawdzam założenia, nazywam ryzyka i pomagam oddzielić to, co naprawdę ważne, od szumu dookoła.</p></div><div class="dark-card"><p>Nie tylko słucham. Zadaję trudne pytania, daję bezpośredni feedback i dzielę się własnym doświadczeniem. Czasem wspólnie szukamy odpowiedzi. Czasem proponuję konkretny eksperyment lub następny krok. A kiedy widzę, że zmierzasz w złą stronę - potrafię powiedzieć „STOP”.</p><p>Nie chodzi o to, żeby na spotkaniu było miło. Chodzi o to, żebyś widział sytuację wyraźniej, wiedział, co dalej - i zrobił ruch.</p></div></div></section>
+      <section class="section"><div class="wrap"><div class="section-heading"><p class="eyebrow">Dla kogo?</p><h2>Największe efekty ze współpracy ze mną osiągają:</h2></div><div class="cards two"><div class="panel"><ul class="clean-list"><li><strong>founderzy i przedsiębiorcy</strong></li><li><strong>managerzy i liderzy</strong> stojący przed ważnymi decyzjami</li><li>ambitni <strong>specjaliści</strong> szukający kierunku kariery</li><li>ludzie <strong>budujący</strong> produkt, projekt, side hustle albo własną niezależność</li><li><strong>umysły analityczne</strong> z ADHD lub neuroatypowością</li></ul></div><div class="panel soft"><h3>Komu NIE pomogę:</h3><ul class="clean-list"><li>Nie pomogę osobom szukającym terapii, diagnozy, leczenia albo prowadzenia przez poważny kryzys psychiczny.</li><li>Nie pomogę też komuś, kto chce „rozwoju” jako rozwijającej rozmowy, ale unika decyzji, eksperymentów, feedbacku i rozliczenia z działania.</li><li>Nie pomogę także komuś, kto nie jest gotowy na konfrontację z własnym sposobem myślenia albo nie chce zmienić perspektywy.</li></ul></div></div></div></section>
+      <section class="section band" id="workstyle"><div class="wrap"><div class="section-heading center"><p class="eyebrow">Proces</p><h2>Jak pracuję?</h2></div><div class="cards three"><div class="dark-card"><div class="card-icon">01</div><h3>Zrozumieć</h3><p>Szukamy źródła problemu, kontekstu i tego, co dziś najbardziej blokuje Ci zrobić mały krok.</p></div><div class="dark-card"><div class="card-icon">02</div><h3>Podważyć</h3><p>Poszerzamy perspektywę sprawdzając czy założenia są faktami, lękiem, dopowiedzianą historią, a może przyzwyczajeniem.</p></div><div class="dark-card"><div class="card-icon">03</div><h3>Uporządkować</h3><p>Porządkujemy chaos: opcje, ryzyka, zależności, priorytety i rzeczy, na które masz realny wpływ.</p></div><div class="dark-card"><div class="card-icon">04</div><h3>Zdecydować</h3><p>Pomagam Ci wybrać kierunek, za który jesteś gotowy wziąć odpowiedzialność.</p></div><div class="dark-card"><div class="card-icon">05</div><h3>Zrobić mały krok</h3><p>Przekładamy wnioski na konkretne działanie, eksperyment albo rozmowę. Bo nawet najlepsza decyzja nic nie zmienia, dopóki nie pojawi się za nią działanie.</p></div><div class="dark-card"><div class="card-icon">06</div><h3>Warsztat</h3><p>W swojej pracy posługuję się metodykami, technikami i narzędziami zebranymi przez lata studiów, praktyki i certyfikowania się.</p></div></div></div></section>
+      <section class="section"><div class="wrap split"><div><p class="eyebrow">Rezultat</p><h2>Co zostaje po naszym spotkaniu?</h2><ul class="clean-list"><li>Decyzja</li><li>Mapa rzeczywistego problemu</li><li>Trudna rozmowa</li><li>Przeprowadzenie eksperymentu</li><li>Nowa perspektywa</li><li>Konkretne „nie”</li></ul></div><div class="panel soft"><p class="lead">Coś, z czym możesz coś zrobić.<br><strong>Kolejny mały krok.</strong></p></div></div></section>
+      <section class="section" id="warsztat"><div class="wrap"><div class="section-heading"><p class="eyebrow">MÓJ WARSZTAT</p><h2>Doświadczenie i narzędzia</h2><p>Mój warsztat budowałem na drodze wielu lat doświadczeń zaczynając jako programista (Predica), konsultant procesów biznesowych (Findwise), lider IT (PwC), przedsiębiorca (m.in. Developico), mentor (m.in. Politechnika Warszawska).</p><p>Korzystam z doświadczeń, technik i narzędzi - zależnie od potrzeb i okoliczności. Zobacz 5 przykładów, gdzie opisuję kontekst, narzędzie z jakiego skorzystałem i rezultat.</p></div><div class="panel"><p><strong>Ostatnie 10 lat istotnie wzbogaciły moje doświadczenie:</strong></p><ul class="clean-list"><li>Zbudowałem firmę z 4 mln rocznego obrotu</li><li>3-krotnie otrzymałem tytuł Microsoft MVP (m.in. za ponad 100+ wystąpień publicznych)</li><li>Ukończyłem ½ Iron Man w czasie poniżej 5h</li><li>Zbudowałem kilka personal brandów (nie ze wszystkich jestem dumny)</li><li>Pomagam prowadzić kawiarnię od strony IT i odpowiadając za strategię cenową</li><li>Utworzyłem autorski kierunek na Politechnice Warszawskiej</li><li>Zorganizowałem 3 edycje największej konferencji No Code, która przyciągnęła łącznie 1000 osób</li></ul></div><h2 id="cases" style="margin-top:52px">Realne przykłady współpracy</h2><div class="case"><h3>Case 1. „Czy naprawdę chcę zmienić pracę?”</h3><p>Doświadczony specjalista był przekonany, że potrzebuje zmiany pracy. Skorzystaliśmy z <b>matrycy Mam/Chcę oraz modelu ABCDE</b> i odkryliśmy, że problemem nie była sama firma, ale konkretne elementy obecnej roli. Zamiast od razu składać wypowiedzenie, przygotowaliśmy rozmowę z przełożonym.</p></div><div class="case"><h3>Case 2. Manager czy ekspert?</h3><p>Senior dostał możliwość wejścia w rolę managerską. Wykorzystaliśmy <b>matrycę Mam/Chcę oraz okno Johari</b>, oddzielając prestiż i oczekiwania otoczenia od tego, jak naprawdę chce pracować. Zaplanował mały eksperyment przed trwałą zmianą roli.</p></div><div class="case"><h3>Case 3. Mam pomysł na biznes. Czy rzucać etat?</h3><p>Skorzystaliśmy z pętli OODA oraz analizy ROI-Driven. Zamiast odpowiadać „czy biznes wypali?”, zamieniliśmy niewiadome na hipotezy do sprawdzenia i prosty plan walidacji.</p></div><div class="case"><h3>Case 4. Firma działa, ale founder nie wie, co dalej</h3><p>Porównaliśmy kierunki rozwoju według kilku kryteriów, korzystając z Lean Canvas oraz analizy SWOT, nazwaliśmy koszt alternatywny i wybraliśmy jeden eksperyment biznesowy na najbliższy okres.</p></div><div class="case"><h3>Case 5. „Muszę się lepiej zorganizować”</h3><p>Manager miał więcej zobowiązań, niż był w stanie realnie obsłużyć. Wykonaliśmy Koło Życia, a następnie używając matrycy Effort/Value wybraliśmy, z czego zrezygnować, co oddelegować i gdzie postawić granice.</p></div></div></section>
+      ${testimonials()}
+      ${extraTestimonials()}
+      <section class="section band" id="gotowy"><div class="wrap split"><div><p class="eyebrow">Jesteś gotowy na swój rozwój zawodowy?</p><h2>Pierwszy krok jest prosty.</h2><ol class="clean-list"><li>Zapisz się na spotkanie próbne</li><li>Wybierz termin</li><li>Przygotuj się do spotkania</li></ol><a class="button" href="mailto:kontakt@hiperaktywnymike.pl">Zapisz się na spotkanie próbne online</a></div><div class="dark-card"><h3>Cennik spotkań</h3><ul class="price-list"><li><span>Spotkanie próbne</span><strong>0 PLN</strong></li><li><span>Jednorazowe</span><strong>400 PLN</strong></li><li><span>Pakiet 5x</span><strong>1500 PLN</strong></li><li><span>Dłuższa współpraca</span><strong>Do negocjacji</strong></li></ul><small>Ceny za 60 minut spotkania. Do kwot należy doliczyć VAT.</small></div></div></section>
+      <section class="section-tight"><div class="wrap"><div class="section-heading center"><p class="eyebrow">Najczęstsze pytania</p><h2>FAQ</h2></div>${faq([["Z jakim problemem mogę do Ciebie przyjść?", "Najczęściej pracuję z decyzjami dotyczącymi kariery, zarządzania, własnego biznesu i kolejnych kroków zawodowych. Jeśli nie masz pewności, czy Twój temat pasuje - właśnie po to jest pierwsze spotkanie."], ["Czy spotkanie próbne jest bezpłatne?", "Tak. Pierwsze spotkanie jest bezpłatne i nie zobowiązuje Cię do dalszej współpracy."], ["Co dzieje się podczas próbnego spotkania?", "Rozmawiamy o Twojej sytuacji, problemie lub decyzji, przed którą stoisz. Chcę zrozumieć, czego potrzebujesz, a jednocześnie sprawdzić, czy i w jaki sposób mogę Ci pomóc."], ["Ile trwa spotkanie próbne?", "Spotkanie próbne trwa 60 minut - tyle samo, co standardowe spotkanie."], ["Jak umówić się na spotkanie próbne?", "Wybierz dogodny termin, podaj swój adres e-mail i gotowe."], ["Jak przygotować się do spotkania?", "Po rezerwacji otrzymasz dokument zawierający 24 pytania, które pomogą Ci uporządkować swoją sytuację. Nie musisz mieć gotowych odpowiedzi na wszystko."], ["Czy spotkanie próbne jest online czy offline?", "Spotkania próbne zawsze odbywają się online. Link do spotkania otrzymasz po dokonaniu rezerwacji."], ["Czy po spotkaniu muszę zdecydować się na współpracę?", "Nie. Po spotkaniu oboje powinniśmy wiedzieć, czy dalsza współpraca ma sens - bez presji na podejmowanie decyzji od razu."], ["Co jeśli spotkanie potrwa 15 minut dłużej?", "Staram się pracować w określonych ramach i punktualność jest dla mnie ważna. Jeśli jednak rozmowa wyjątkowo będzie wymagała kilku dodatkowych minut i oboje będziemy mieli taką możliwość, po prostu skończymy trochę później."], ["Czy mogę otrzymać fakturę?", "Tak, wystarczy że wyślesz mi dane do faktury w wygodny dla Ciebie sposób."]])}</div></section>`);
+    const personalMeetingPage = () => pageShell(`
+      <section class="hero"><div class="wrap hero-grid"><div><p class="eyebrow">Rozwój zawodowy · spotkanie próbne</p><div class="rating">★★★★★ <span style="color:var(--cp-text-muted);font-size:.9rem;letter-spacing:0">Dołącz do 100+ zadowolonych klientów</span></div><h1>Rozwój Zawodowy Małymi Krokami</h1><p class="lead">Jestem inżynierem, przedsiębiorcą i ojcem.</p><p class="lead">Jeśli jesteś analitycznym umysłem i czujesz się sam z decyzją do podjęcia, i potrzebujesz zrobić mały krok to...</p><div class="actions"><a class="button" href="#gotowy">Porozmawiajmy!</a><a class="button secondary" href="#cases">Zobacz case studies</a><a class="button secondary" href="#opinie">Zobacz opinie</a></div></div><div><img class="portrait" src="${imageBase}pmp28_wroclaw_0060_9229-scaled-1.jpg" alt="Mike Guzowski"><p class="quote">„Jeśli szukasz mentora, który łączy własne doświadczenie, ciekawość drugiego człowieka i różne narzędzia rozwojowe, a przy tym podchodzi do współpracy po ludzku i bez budowania dystansu „eksperta”, zdecydowanie warto skorzystać z mentoringu u Michała.”<br><strong>- Monika B., HR Manager</strong></p></div></div></section>
+      <section class="section" id="warsztat-spotkanie"><div class="wrap"><div class="section-heading"><p class="eyebrow">Warsztat</p><h2>MÓJ WARSZTAT</h2><p><strong>Moja kariera:</strong> Programista (Predica) ➡️ Konsultant Procesów Biznesowych (Findwise) ➡️ Lider IT (PwC) ➡️ Przedsiębiorca (3x) ➡️ Doradca (Politechnika Warszawska)</p><p><strong>Mój styl:</strong> Zrozumieć ➡️ Podważyć ➡️ Uporządkować ➡️ Zdecydować ➡️ Zrobić mały krok</p><p><strong>Moje osiągnięcia:</strong></p></div><div class="panel"><ul class="clean-list"><li>(Zarządzanie) Zarządzałem ludźmi w 30-osobowej firmie jak i w dużych firmach</li><li>(Sprzedaż) Zbudowałem firmę z 4 mln rocznego obrotu</li><li>(Negocjacje) Pomagam managerom z enterprise pozyskiwać budżety</li><li>(Dyscyplina) Ukończyłem ½ Iron Man w czasie poniżej 5h</li><li>(Umiejętności miękkie) 3-krotnie otrzymałem tytuł Microsoft MVP (m.in. za ponad 100+ wystąpień publicznych)</li></ul></div><h2 id="cases" style="margin-top:52px">Realne przykłady współpracy</h2><div class="case"><h3>Case 1. „Czy naprawdę chcę zmienić pracę?”</h3><p>Doświadczony specjalista był przekonany, że potrzebuje zmiany pracy. Miał dość obecnego miejsca i zaczął przeglądać oferty. Skorzystaliśmy z matrycy Mam/Chcę oraz modelu ABCDE, i dzięki temu odkryliśmy, że problemem nie była sama firma, ale konkretne elementy obecnej roli. Zmiana pracodawcy mogłaby odtworzyć dokładnie ten sam problem kilka miesięcy później. Zamiast od razu składać wypowiedzenie, określiliśmy warunki, które musiałyby się zmienić, żeby obecna praca znowu miała sens, oraz przygotowaliśmy rozmowę z przełożonym.</p></div><div class="case"><h3>Case 2. Manager czy ekspert?</h3><p>Senior dostał możliwość wejścia w rolę managerską. Z jednej strony traktował to jako naturalny awans, z drugiej nie był pewien, czy rzeczywiście chce zarządzać ludźmi. Co zrobiliśmy, to matrycę Mam/Chcę oraz okno Johari. W ten sposób oddzieliliśmy prestiż i oczekiwania otoczenia od tego, jak naprawdę chce pracować. Rozłożyliśmy obie ścieżki na konsekwencje, ryzyka i możliwości. Zamiast podejmować decyzję na podstawie wyobrażeń, zaplanował mały eksperyment pozwalający sprawdzić część obowiązków managerskich przed trwałą zmianą roli.</p></div><div class="case"><h3>Case 3. Mam pomysł na biznes. Czy rzucać etat?</h3><p>Specjalista od miesięcy myślał o własnej firmie. Im więcej analizował, tym więcej znajdował argumentów zarówno za, jak i przeciw. Skorzystaliśmy z pętli OODA oraz wsparliśmy to analizą ROI-Driven. Zamiast próbować odpowiedzieć na pytanie „czy biznes wypali?”, zamieniliśmy niewiadome na hipotezy, które można sprawdzić. Na koniec wykorzystując model SMART(ER) powstał prosty plan walidacji: pierwsza oferta, rozmowy z potencjalnymi klientami i kryteria określające, kiedy dalsze inwestowanie czasu ma sens.</p></div><div class="case"><h3>Case 4. Firma działa, ale founder nie wie, co dalej</h3><p>Przedsiębiorca miał kilka możliwych kierunków rozwoju firmy. Każdy wydawał się sensowny, więc wszystkie były rozwijane jednocześnie. Problemem nie był brak pomysłów. Problemem była niechęć do rezygnacji z któregokolwiek z nich. Porównaliśmy kierunki według kilku kryteriów, korzystając z modelu Lean Canvas oraz analizy SWOT, nazwaliśmy koszt alternatywny i wybraliśmy jeden eksperyment biznesowy na najbliższy okres. Pozostałe pomysły świadomie trafiły na później.</p></div><div class="case"><h3>Case 5. „Muszę się lepiej zorganizować”</h3><p>Manager przyszedł z problemem produktywności. Miał za dużo tematów, ciągle coś odkładał i szukał kolejnego sposobu organizacji pracy. Faktycznie miał więcej zobowiązań, niż był w stanie realnie obsłużyć. Wyraźnie zobaczyliśmy to wykonując Koło Życia, a następnie używając matrycy Effort/Value, wybraliśmy te obszary z których warto zrezygnować, co oddelegować, a gdzie postawić granice.</p></div></div></section>
+      <section class="section band" id="opiniapiotra"><div class="wrap split"><div><p class="eyebrow">Opinia Piotra Tyrakowskiego</p><h2>Rozmowa, która prowadzi do działania.</h2><p>CoFounder AutoYT - Autonomous YouTube Agent for Businesses | Lead Developer @ Deus Media Group</p><div class="rating">★★★★★</div></div><iframe class="video-frame" src="https://www.youtube.com/embed/yxt7O0HMKhw" title="Opinia Piotra Tyrakowskiego" loading="lazy" allowfullscreen></iframe></div></section>
+      <section class="section" id="dla-kogo-spotkanie"><div class="wrap"><div class="section-heading"><p class="eyebrow">Dla kogo?</p><h2>Największe efekty ze współpracy ze mną osiągają:</h2></div><div class="cards two"><div class="panel"><ul class="clean-list"><li><strong>founderzy i przedsiębiorcy</strong></li><li><strong>managerzy i liderzy</strong> stojący przed ważnymi decyzjami</li><li>ambitni <strong>specjaliści</strong> szukający kierunku kariery</li><li>ludzie <strong>budujący</strong> produkt, projekt, side hustle albo własną niezależność</li><li><strong>umysły analityczne</strong> z ADHD lub neuroatypowością</li></ul></div><div class="panel soft"><h3>Komu NIE pomogę:</h3><ul class="clean-list"><li>Nie pomogę osobom szukającym terapii, diagnozy, leczenia albo prowadzenia przez poważny kryzys psychiczny</li><li>Nie pomogę też komuś, kto chce „rozwoju” jako rozwijającej rozmowy, ale unika decyzji, eksperymentów, feedbacku i rozliczenia z działania</li><li>Nie pomogę także komuś, kto nie jest gotowy na konfrontację z własnym sposobem myślenia albo nie chce zmienić perspektywy, nawet gdy fakty pokazują, że obecna perspektywa nie działa.</li></ul></div></div></div></section>
+      <section class="section-tight"><div class="wrap panel soft"><div class="section-heading"><p class="eyebrow">Opinia Dagmary Anuszczyk</p><h2>„Jeśli szukasz mentora, który łączy w sobie doświadczenie, szczyptę humoru i mnóstwo serca, Mike jest właśnie dla Ciebie.”</h2><p>CEO DataDO &amp; Data Heroes</p><div class="rating">★★★★★</div></div></div></section>
+      <section class="section band" id="gotowy"><div class="wrap split"><div><p class="eyebrow">JESTEŚ GOTOWY NA SWÓJ ROZWÓJ ZAWODOWY?</p><h2>Umów spotkanie próbne.</h2><ol class="clean-list"><li>Zapisz się na spotkanie próbne</li><li>Wybierz termin</li><li>Przygotuj się do spotkania</li></ol><a class="button" href="mailto:kontakt@hiperaktywnymike.pl">Zapisz się na spotkanie próbne online</a></div><div class="dark-card"><h3>Cennik spotkań</h3><ul class="price-list"><li><span>Spotkanie próbne</span><strong>0 PLN</strong></li><li><span>Jednorazowe</span><strong>400 PLN</strong></li><li><span>Pakiet 5x</span><strong>1500 PLN</strong></li><li><span>Dłuższa współpraca</span><strong>Do negocjacji</strong></li></ul><small>Ceny za 60 minut spotkania. Do kwot należy doliczyć VAT.</small></div></div></section>
+      ${testimonials()}${extraTestimonials()}
+      <section class="section-tight"><div class="wrap"><div class="section-heading center"><p class="eyebrow">Najczęstsze pytania</p><h2>FAQ</h2></div>${faq([["Z jakim problemem mogę do Ciebie przyjść?", "Najczęściej pracuję z decyzjami dotyczącymi kariery, zarządzania, własnego biznesu i kolejnych kroków zawodowych. Jeśli nie masz pewności, czy Twój temat pasuje - właśnie po to jest pierwsze spotkanie."], ["Czy spotkanie próbne jest bezpłatne?", "Tak. Pierwsze spotkanie jest bezpłatne i nie zobowiązuje Cię do dalszej współpracy."], ["Co dzieje się podczas próbnego spotkania?", "Rozmawiamy o Twojej sytuacji, problemie lub decyzji, przed którą stoisz. Chcę zrozumieć, czego potrzebujesz, a jednocześnie sprawdzić, czy i w jaki sposób mogę Ci pomóc."], ["Ile trwa spotkanie próbne?", "Spotkanie próbne trwa 60 minut - tyle samo, co standardowe spotkanie."], ["Jak umówić się na spotkanie próbne?", "Kliknij przycisk znajdujący się nad sekcją FAQ lub wybierz dogodny termin. Podaj swój adres e-mail i gotowe."], ["Jak przygotować się do spotkania?", "Po rezerwacji otrzymasz dokument zawierający 24 pytania, które pomogą Ci uporządkować swoją sytuację. Nie musisz mieć gotowych odpowiedzi na wszystko."], ["Czy spotkanie próbne jest online czy offline?", "Spotkania próbne zawsze odbywają się online. Link do spotkania otrzymasz po dokonaniu rezerwacji."], ["Czy po spotkaniu muszę zdecydować się na współpracę?", "Nie. Po spotkaniu oboje powinniśmy wiedzieć, czy dalsza współpraca ma sens - bez presji na podejmowanie decyzji od razu."], ["Co jeśli spotkanie potrwa 15 minut dłużej?", "Staram się pracować w określonych ramach i punktualność jest dla mnie ważna. Jeśli jednak rozmowa wyjątkowo będzie wymagała kilku dodatkowych minut i oboje będziemy mieli taką możliwość, po prostu skończymy trochę później."], ["Czy mogę otrzymać fakturę?", "Tak, wystarczy że wyślesz mi dane do faktury w wygodny dla Ciebie sposób."]])}</div></section>`);
+    const aboutHomePage = () => pageShell(`
+      <section class="section"><div class="wrap profile"><img src="${imageBase}pmp28_wroclaw_0060_9229-scaled-1.jpg" alt="Michał Mike Guzowski - inżynier, przedsiębiorca i mentor"><div><p class="eyebrow">O mnie</p><h1>Michał „Mike” Guzowski</h1><p class="lead">Jestem inżynierem, przedsiębiorcą, mentorem i wykładowcą na Politechnice Warszawskiej.</p><p>Lubię działać, dowozić i wspierać w tym innych. Pomagam specjalistom, inżynierom, managerom i founderom podejmować trafniejsze decyzje zawodowe i biznesowe.</p><p>Jeśli szukasz kontaktu ze mną lub nawiązania współpracy, napisz do mnie albo znajdź mnie na jednej z platform społecznościowych.</p><div class="socials"><a href="https://www.linkedin.com/in/michalguzowski/">LinkedIn ↗</a><a href="https://substack.com/@hiperaktywnymike">Substack ↗</a></div></div></div></section>
+      <section class="section band"><div class="wrap"><div class="section-heading"><p class="eyebrow">Czym się zajmuję?</p><h2>Pomagam porządkować decyzje i przekładać je na działanie.</h2><p>Łączę doświadczenie przedsiębiorcy i lidera z inżynierskim sposobem myślenia. Wspieram rozwój zawodowy, mentoring, zarządzanie, sprzedaż B2B, technologię i transformację cyfrową.</p></div><div class="cards two"><div class="dark-card"><h3>Komu pomagam?</h3><ul class="clean-list"><li>specjalistom i inżynierom szukającym kierunku,</li><li>managerom i liderom podejmującym trudne decyzje,</li><li>founderom i przedsiębiorcom rozwijającym biznes,</li><li>osobom rozważającym zmianę zawodową lub biznesową.</li></ul></div><div class="dark-card"><h3>Jak pracuję?</h3><p>Najpierw rozumiem sytuację, potem podważam założenia, porządkuję możliwości, pomagam zdecydować i przełożyć decyzję na mały krok.</p><a class="button" href="#spotkanie">Zobacz Małe kroki</a></div></div></div></section>
+      <section class="section"><div class="wrap"><div class="section-heading"><p class="eyebrow">Moje doświadczenie</p><h2>Role, które łączę w codziennej pracy</h2></div><div class="flow-block"><div class="flow-diagram"><span class="flow-node">Programista</span><span class="flow-arrow">→</span><span class="flow-node">Konsultant Procesów Biznesowych</span><span class="flow-arrow">→</span><span class="flow-node">Lider IT</span><span class="flow-arrow">→</span><span class="flow-node">Przedsiębiorca</span><span class="flow-arrow">→</span><span class="flow-node">Doradca</span></div></div></div></section>
+      <section class="section-tight"><div class="wrap panel"><h2>Porozmawiajmy o Twojej sytuacji</h2><p>Jeżeli stoisz przed decyzją zawodową lub biznesową i potrzebujesz uporządkować kolejny krok, zacznijmy od rozmowy.</p><a class="button" href="#spotkanie">Przejdź do Małych kroków</a></div></section>`);
+    const xmlAboutPage = () => pageShell(`<section class="section"><div class="wrap profile"><img src="${imageBase}pmp28_wroclaw_0060_9229-scaled-1.jpg" alt="Michał Mike Guzowski"><div><p class="eyebrow">O mnie</p><h1>Hej, jestem Mike Guzowski</h1><p class="lead">Jestem inżynierem, przedsiębiorcą, mentorem i wykładowcą na Politechnice Warszawskiej.</p><p>Lubię działać, dowozić i wspieram w tym innych.</p><p>Jeśli szukasz kontaktu ze mną lub nawiązania współpracy, to skontaktuj się ze mną przez którąś z platform społecznościowych:</p><div class="socials"><a href="https://www.linkedin.com/in/michalguzowski/">LinkedIn</a><a href="https://substack.com/@hiperaktywnymike">Substack</a></div></div></div></section>`);
+    const pages = { home: xmlAboutPage, spotkanie: personalMeetingPage, firma: companyPage, "o-mnie": xmlAboutPage, privacy: privacyPage };
+    const pageMetadata = {
+      home: { title: "Michał „Mike” Guzowski | O mnie", description: "Michał „Mike” Guzowski - inżynier, przedsiębiorca, mentor i doradca pomagający podejmować decyzje zawodowe i biznesowe." },
+      spotkanie: { title: "Małe kroki | Rozwój zawodowy z Michałem Guzowskim", description: "Małe kroki to praktyczne spotkanie i sposób pracy dla osób, które chcą uporządkować decyzję zawodową lub biznesową." },
+      firma: { title: "Rozwój zawodowy w firmie | Michał Guzowski", description: "Wsparcie managerów, liderów i specjalistów w trudnych decyzjach, zarządzaniu, sprzedaży i rozwoju organizacji." },
+      "o-mnie": { title: "Michał „Mike” Guzowski | O mnie", description: "Poznaj doświadczenie Michała Guzowskiego: inżyniera, przedsiębiorcy, mentora i wykładowcy Politechniki Warszawskiej." },
+      privacy: { title: "Polityka prywatności | Michał Guzowski", description: "Informacje o przetwarzaniu danych osobowych i plikach cookies na stronie Michała Guzowskiego." }
+    };
+    function updateSeo(key) {
+      const metadata = pageMetadata[key] || pageMetadata.home;
+      const canonical = pathRoute ? `https://rozwojzawodowymike.pl/${pathRoute}/` : "https://rozwojzawodowymike.pl/";
+      document.title = metadata.title;
+      document.querySelector('meta[name="description"]').content = metadata.description;
+      document.querySelector('meta[property="og:title"]').content = metadata.title;
+      document.querySelector('meta[property="og:description"]').content = metadata.description;
+      document.querySelector('meta[property="og:url"]').content = canonical;
+      document.querySelector('link[rel="canonical"]').href = canonical;
+      document.querySelector('#structuredData').textContent = JSON.stringify({
+        "@context": "https://schema.org",
+        "@graph": [
+          { "@type": "Person", "@id": "https://rozwojzawodowymike.pl/#michal-guzowski", "name": "Michał Guzowski", "alternateName": "Mike Guzowski", "url": "https://rozwojzawodowymike.pl/", "image": "https://rozwojzawodowymike.pl/Resources/pmp28_wroclaw_0060_9229-scaled-1.jpg", "jobTitle": "Inżynier, przedsiębiorca, mentor i doradca", "description": "Michał Guzowski pomaga specjalistom, managerom i founderom podejmować decyzje zawodowe i biznesowe.", "sameAs": ["https://www.linkedin.com/in/michalguzowski/", "https://substack.com/@hiperaktywnymike"] },
+          { "@type": "WebSite", "@id": "https://rozwojzawodowymike.pl/#website", "url": "https://rozwojzawodowymike.pl/", "name": "Rozwój Zawodowy Małymi Krokami", "inLanguage": "pl-PL", "publisher": { "@id": "https://rozwojzawodowymike.pl/#michal-guzowski" } },
+          { "@type": "WebPage", "@id": `${canonical}#webpage`, "url": canonical, "name": metadata.title, "description": metadata.description, "inLanguage": "pl-PL", "isPartOf": { "@id": "https://rozwojzawodowymike.pl/#website" }, "about": { "@id": "https://rozwojzawodowymike.pl/#michal-guzowski" } }
+        ]
+      });
+    }
+    function updatePathLinks() {
+      const prefix = pathRoute ? "../" : "";
+      document.querySelectorAll("[data-route]").forEach((link) => { link.href = `${prefix}${link.dataset.route}/index.html${link.dataset.fragment ? `#${link.dataset.fragment}` : ""}`; });
+      document.querySelectorAll('a[href="#spotkanie"]').forEach((link) => { link.href = `${prefix}founder/index.html`; });
+      document.querySelectorAll('a[href="#privacy"]').forEach((link) => { link.href = `${prefix}privacy/`; });
+    }
+    function render() {
+      const pathKey = pathRoute === "founder" ? "spotkanie" : pathRoute;
+      const key = location.hash.replace("#", "") || pathKey || "home";
+      const sectionTargets = { cases: "cases-reordered", opinie: "opinie", FAQ: "FAQ", gotowy: "gotowy" };
+      if (pathRoute === "founder" && sectionTargets[key] && document.querySelector(`#${sectionTargets[key]}`)) {
+        document.querySelector(`#${sectionTargets[key]}`).scrollIntoView({ behavior: "smooth" });
+        return;
+      }
+      const page = pages[key] || pages.home;
+      document.querySelector("#app").innerHTML = page();
+      updateSeo(pages[key] ? key : "home");
+      if (key === "spotkanie") {
+        const meetingLabel = document.querySelector(".hero .eyebrow");
+        if (meetingLabel) meetingLabel.textContent = "Małe kroki · spotkanie próbne";
+      }
+      if (key === "firma") document.querySelector(".portrait").src = `${imageBase}pmp28_wroclaw_0060_9229-scaled-1.jpg`;
+      if (key === "spotkanie") reorderPersonalMeeting();
+      enhanceWorkshop();
+      enhanceTestimonials();
+      enhanceMeetingImages();
+      applyCaseFormatting();
+      updatePathLinks();
+      if (key === "spotkanie") {
+        const bookingUrl = "https://outlook.office.com/book/Spotkanie@hiperaktywnymike.pl/s/qyAEgZlkcU-xhXVQFp6COQ2?ismsaljsauthenabled";
+        document.querySelectorAll('a.button[href^="mailto:"], a.button[href="#gotowy"]').forEach((link) => { link.href = bookingUrl; link.target = "_blank"; link.rel = "noopener"; });
+      }
+      if (key === "firma") {
+        const bookingUrl = "https://outlook.office.com/book/Spotkanie@hiperaktywnymike.pl/s/qZReALZzcUe_BAtIafIPJw2?ismsaljsauthenabled";
+        document.querySelectorAll('a.button[href^="mailto:"]').forEach((link) => { link.href = bookingUrl; link.target = "_blank"; link.rel = "noopener"; });
+      }
+      document.querySelectorAll("[data-nav]").forEach((link) => link.classList.toggle("active", link.dataset.nav === key));
+      document.querySelectorAll("img").forEach((image) => image.addEventListener("error", () => image.classList.add("image-missing")));
+      document.querySelectorAll(".faq-question").forEach((question) => question.addEventListener("click", () => question.parentElement.classList.toggle("open")));
+      window.scrollTo({ top: 0, behavior: "instant" });
+    }
+    document.querySelector("#themeToggle").addEventListener("click", () => {
+      document.documentElement.setAttribute("data-theme", document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+    });
+    window.addEventListener("hashchange", render);
+    render();
+  </script>
+</body>
+</html>
