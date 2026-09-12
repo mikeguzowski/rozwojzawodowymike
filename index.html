@@ -3,15 +3,776 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="refresh" content="0; url=miedzynamiinzynierami/">
-  <meta name="robots" content="noindex,follow">
+  <script src="Resources/redirect-links.js" defer></script>
   <title>Między nami inżynierami | Mike Guzowski</title>
-  <link rel="canonical" href="https://rozwojzawodowymike.pl/miedzynamiinzynierami/">
+  <meta name="description" content="Między nami inżynierami — o pracy, biznesie i robieniu czegoś swojego z perspektywy inżyniera, który przeszedł drogę od programowania do sprzedaży, zarządzania i własnej firmy.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="author" content="Michał „Mike” Guzowski">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:title" content="Między nami inżynierami | Mike Guzowski">
+  <meta property="og:description" content="O pracy, biznesie i robieniu czegoś swojego z perspektywy człowieka, który zaczął od programowania.">
+  <meta property="og:image" content="Resources/Mike.png">
+  <meta property="og:url" content="https://rozwojzawodowymike.pl/">
+  <link rel="canonical" href="https://rozwojzawodowymike.pl/">
+  <link rel="icon" type="image/png" href="Resources/Hiperaktywny%20Mike_Logo-13.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Między nami inżynierami",
+    "description": "O pracy, biznesie i robieniu czegoś swojego z perspektywy inżyniera, przedsiębiorcy i mentora.",
+    "url": "https://rozwojzawodowymike.pl/",
+    "publisher": {
+      "@type": "Person",
+      "name": "Michał 'Mike' Guzowski",
+      "jobTitle": "Inżynier, przedsiębiorca, doradca, mentor i wykładowca",
+      "sameAs": [
+        "https://www.linkedin.com/in/michalguzowski/",
+        "https://www.youtube.com/",
+        "https://substack.com/@hiperaktywnymike"
+      ]
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Michał 'Mike' Guzowski",
+    "jobTitle": "Inżynier, przedsiębiorca, doradca, mentor i wykładowca",
+    "description": "Inżynier, przedsiębiorca, doradca i mentor wspierający specjalistów technicznych w rozwoju kariery i biznesu.",
+    "url": "https://rozwojzawodowymike.pl/",
+    "image": "https://rozwojzawodowymike.pl/Resources/Mike.png",
+    "sameAs": [
+      "https://www.linkedin.com/in/michalguzowski/",
+      "https://substack.com/@hiperaktywnymike"
+    ],
+    "knowsAbout": [
+      "programowanie",
+      "sprzedaż B2B",
+      "zarządzanie",
+      "przedsiębiorczość",
+      "mentoring",
+      "transformacja cyfrowa"
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f4ef;
+      --surface: #fffdf9;
+      --surface-strong: #ffffff;
+      --panel: #f3f1ec;
+      --border: #e3ddd3;
+      --text: #1a1d22;
+      --muted: #5b616d;
+      --muted-strong: #2c313a;
+      --accent: #2c5ad9;
+      --accent-strong: #2147b5;
+      --accent-soft: rgba(44, 90, 217, 0.09);
+      --shadow: 0 18px 48px rgba(22, 26, 33, 0.08);
+      --mono: "SFMono-Regular", "Consolas", "Liberation Mono", monospace;
+      --sans: "Inter", "Segoe UI", Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; }
+    .wrap {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      background: rgba(247, 244, 239, 0.9);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+    }
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      object-fit: contain;
+    }
+    .brand-name {
+      white-space: nowrap;
+      font-size: 0.96rem;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 700;
+      padding: 8px 12px;
+      border-radius: 999px;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+    main { display: block; }
+    .page-section {
+      padding: 84px 0;
+    }
+    .page-section.compact {
+      padding: 52px 0;
+    }
+    .hero {
+      padding: 76px 0 56px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: -140px -100px auto auto;
+      width: 420px;
+      height: 420px;
+      border-radius: 999px;
+      border: 1px solid rgba(44, 90, 217, 0.12);
+      box-shadow: 0 0 0 32px rgba(44, 90, 217, 0.04), 0 0 0 80px rgba(44, 90, 217, 0.02);
+      pointer-events: none;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 54px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    .eyebrow, .kicker {
+      font-family: var(--mono);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-size: 0.72rem;
+      color: var(--accent);
+      font-weight: 700;
+      margin: 0 0 18px;
+    }
+    h1, h2, h3, h4 {
+      margin: 0 0 18px;
+      line-height: 1.04;
+      letter-spacing: -0.055em;
+      font-weight: 800;
+    }
+    h1 {
+      max-width: 700px;
+      font-size: clamp(2.9rem, 6vw, 5.6rem);
+    }
+    h2 {
+      font-size: clamp(2.2rem, 4vw, 3.8rem);
+      max-width: 760px;
+    }
+    h3 {
+      font-size: clamp(1.25rem, 2vw, 1.7rem);
+    }
+    .lead {
+      font-size: clamp(1.08rem, 1.8vw, 1.32rem);
+      line-height: 1.6;
+      color: var(--muted);
+      max-width: 660px;
+    }
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border-radius: 999px;
+      padding: 13px 22px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+    }
+    .button:hover {
+      transform: translateY(-1px);
+    }
+    .button.primary {
+      background: var(--accent);
+      color: white;
+      box-shadow: var(--shadow);
+    }
+    .button.primary:hover {
+      background: var(--accent-strong);
+    }
+    .button.secondary {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+    .button.secondary:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+    .portrait-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 18px;
+    }
+    .portrait {
+      width: min(100%, 470px);
+      aspect-ratio: 1 / 1.08;
+      object-fit: cover;
+      border-radius: 30% 30% 18px 30%;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(26, 29, 34, 0.06);
+    }
+    .author-note {
+      margin: 0;
+      max-width: 520px;
+      padding-left: 18px;
+      border-left: 4px solid var(--accent);
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 36px;
+    }
+    .section-heading p:last-child {
+      color: var(--muted);
+      font-size: 1.04rem;
+      margin: 0;
+    }
+    .two-col {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+    .panel {
+      background: rgba(255,255,255,0.52);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 26px 24px;
+    }
+    .panel.soft {
+      background: #f8f6f2;
+    }
+    .blockquote {
+      max-width: 820px;
+      margin: 0;
+      padding-left: 18px;
+      border-left: 4px solid var(--accent);
+      font-size: 1.18rem;
+      color: var(--muted-strong);
+    }
+    .bullet-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 10px;
+    }
+    .bullet-list li {
+      position: relative;
+      padding-left: 16px;
+      color: var(--muted-strong);
+      line-height: 1.65;
+    }
+    .bullet-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 800;
+    }
+    .route-map {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px 8px;
+      margin-top: 18px;
+    }
+    .route-node {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 8px 14px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.5);
+      color: var(--muted-strong);
+      font-weight: 600;
+    }
+    .route-arrow {
+      color: var(--accent);
+      font-weight: 800;
+      font-size: 1.1rem;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+    .stat-card {
+      background: rgba(255,255,255,0.52);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 24px 22px;
+    }
+    .stat-number {
+      display: block;
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      line-height: 1;
+      letter-spacing: -0.06em;
+      font-weight: 900;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+    .stat-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+    .narrative {
+      display: grid;
+      gap: 18px;
+    }
+    .narrative .panel {
+      background: #f7f5f1;
+    }
+    .three-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+    .topic-card {
+      background: rgba(255,255,255,0.52);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 22px 20px;
+    }
+    .topic-index {
+      display: inline-block;
+      min-width: 42px;
+      padding: 7px 10px;
+      border: 1px solid rgba(44, 90, 217, 0.2);
+      border-radius: 10px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    .topic-card h3 {
+      margin-bottom: 10px;
+    }
+    .topic-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+    .video-card {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      background: rgba(255,255,255,0.52);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+    }
+    .video-thumb {
+      display: block;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      background: linear-gradient(135deg, rgba(44,90,217,.18), rgba(17,17,17,.1));
+    }
+    .video-copy {
+      padding: 0 18px 18px;
+    }
+    .video-copy h3 {
+      margin-bottom: 8px;
+      font-size: 1.18rem;
+      letter-spacing: -0.04em;
+    }
+    .video-copy p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+    .section-note {
+      margin-top: 24px;
+      text-align: center;
+    }
+    .consultation-box {
+      padding: 30px 26px;
+      background: linear-gradient(180deg, rgba(44,90,217,0.04), rgba(255,255,255,0.6));
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 24px;
+      align-items: center;
+    }
+    .consultation-meta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 8px;
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+    }
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 0 40px;
+      background: rgba(255,255,255,0.2);
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px 42px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    .footer-links a {
+      text-decoration: none;
+    }
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+    @media (max-width: 900px) {
+      .hero-grid,
+      .consultation-box,
+      .three-grid,
+      .video-grid,
+      .stats-grid,
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+      .portrait-wrap {
+        align-items: flex-start;
+      }
+      .nav {
+        min-height: 64px;
+      }
+      .brand-name {
+        white-space: normal;
+      }
+    }
+    @media (max-width: 640px) {
+      .nav {
+        width: min(100% - 20px, 1180px);
+      }
+      .wrap {
+        width: min(100% - 20px, 1180px);
+      }
+      .nav-links {
+        gap: 4px;
+      }
+      .nav-links a {
+        padding: 7px 10px;
+        font-size: 0.8rem;
+      }
+      .hero {
+        padding-top: 54px;
+      }
+      .page-section {
+        padding: 64px 0;
+      }
+      .author-note {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <p>Przechodzę do strony <a href="miedzynamiinzynierami/">Między nami inżynierami</a>.</p>
+  <header class="site-header">
+    <nav class="nav" aria-label="Główna nawigacja">
+      <a class="brand" href="./" aria-label="Przejdź na stronę główną">
+        <img class="brand-mark" src="Resources/Hiperaktywny%20Mike_Logo-13.png" alt="Logo Mike Guzowski">
+        <span class="brand-name">Między nami inżynierami</span>
+      </a>
+      <div class="nav-links" aria-label="Menu">
+        <a href="./" class="active">Home</a>
+        <a href="yt">YouTube</a>
+        <a href="konsultacja/">Skonsultuj się</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow">// MIĘDZY NAMI INŻYNIERAMI</p>
+          <h1>Między nami inżynierami</h1>
+          <p class="lead">
+            O pracy, biznesie i robieniu czegoś swojego — z perspektywy człowieka, który zaczął od programowania, a potem musiał nauczyć się sprzedaży, marketingu, zarządzania i prowadzenia firmy.
+          </p>
+          <div class="cta-row">
+            <a class="button primary" href="yt">Zobacz na YouTube →</a>
+            <a class="button secondary" href="#kim-jestem">Kim jestem ↓</a>
+          </div>
+        </div>
+        <div class="portrait-wrap">
+          <img class="portrait" src="Resources/Mike.png" alt="Mike Guzowski podczas rozmowy i pracy z ludźmi">
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section" id="kim-jestem">
+      <div class="wrap">
+        <div class="section-heading">
+          <p class="eyebrow">01 / KIM JESTEM</p>
+          <h2>Zaczynałem jako programista.</h2>
+        </div>
+        <div class="two-col">
+          <div>
+            <p class="lead">Kiedy zacząłem budować firmę, szybko okazało się, że samo programowanie już nie wystarcza.</p>
+            <p class="bullet-list">
+              <li>Trzeba było podpisywać umowy. To były kwestie prawne.</li>
+              <li>Trzeba było docierać do klientów. To był marketing.</li>
+              <li>Trzeba było przekonać ich do współpracy. To była sprzedaż.</li>
+              <li>Potem trzeba było zbudować zespół i ustalić, kto co robi, kiedy i dlaczego.</li>
+            </p>
+          </div>
+          <div>
+            <p class="blockquote">Zakres odpowiedzialności zaczął rosnąć znacznie szybciej niż zakres mojej wiedzy.</p>
+            <p class="lead" style="margin-top: 22px;">I właśnie o tej drodze jest „Między nami inżynierami”.</p>
+            <p class="lead" style="margin-top: 10px;"><strong>Nie o tym, jak przestać być inżynierem.</strong></p>
+            <p class="lead" style="margin-top: 10px;"><strong>O tym, co się dzieje, kiedy samo bycie dobrym inżynierem przestaje wystarczać.</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section compact">
+      <div class="wrap">
+        <div class="section-heading">
+          <p class="eyebrow">02 / DROGA</p>
+          <h2>Rozszerzanie zakresu odpowiedzialności.</h2>
+        </div>
+        <div class="panel">
+          <div class="route-map" aria-label="Droga kariery">
+            <span class="route-node">Inżynier</span>
+            <span class="route-arrow" aria-hidden="true">→</span>
+            <span class="route-node">Programista</span>
+            <span class="route-arrow" aria-hidden="true">→</span>
+            <span class="route-node">Przedsiębiorca</span>
+            <span class="route-arrow" aria-hidden="true">→</span>
+            <span class="route-node">Sprzedaż</span>
+            <span class="route-arrow" aria-hidden="true">→</span>
+            <span class="route-node">Budowanie firm</span>
+            <span class="route-arrow" aria-hidden="true">→</span>
+            <span class="route-node">Praca z ludźmi</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section">
+      <div class="wrap">
+        <div class="section-heading">
+          <p class="eyebrow">03 / WIARYGODNOŚĆ</p>
+          <h2>Nie znam tej drogi z książek. Przechodziłem ją w praktyce.</h2>
+        </div>
+        <div class="stats-grid">
+          <article class="stat-card">
+            <span class="stat-number">4 mln zł</span>
+            <p>rocznego obrotu firmy IT, którą zbudowałem</p>
+          </article>
+          <article class="stat-card">
+            <span class="stat-number">1,5 mln zł</span>
+            <p>przychodu firmy szkoleniowej, którą założyłem</p>
+          </article>
+          <article class="stat-card">
+            <span class="stat-number">3×</span>
+            <p>Microsoft MVP, m.in. za działalność edukacyjną i ponad 100 wystąpień publicznych</p>
+          </article>
+          <article class="stat-card">
+            <span class="stat-number">1000 osób</span>
+            <p>na 3 edycjach konferencji No Code Days, które zorganizowałem</p>
+          </article>
+        </div>
+        <div class="narrative" style="margin-top: 20px;">
+          <div class="panel">
+            <p class="kicker">Politechnika Warszawska</p>
+            <p style="margin: 0; color: var(--muted-strong);">Jestem wykładowcą i mentorem na Politechnice Warszawskiej. Utworzyłem tam również autorski kierunek studiów podyplomowych.</p>
+          </div>
+          <div class="panel">
+            <p class="kicker">Zarządzanie</p>
+            <p style="margin: 0; color: var(--muted-strong);">Zarządzałem ludźmi zarówno w 30-osobowej firmie, jak i w dużych organizacjach.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section">
+      <div class="wrap">
+        <div class="section-heading">
+          <p class="eyebrow">04 / O CZYM ROZMAWIAMY</p>
+          <h2>Problemy, które zaczynają się tam, gdzie kończy się technologia.</h2>
+        </div>
+        <div class="three-grid">
+          <article class="topic-card">
+            <span class="topic-index">01</span>
+            <h3>Kariera</h3>
+            <p>Co robić, kiedy bycie dobrym specjalistą przestaje wystarczać. Zmiana roli. Ekspert czy manager. Większa odpowiedzialność.</p>
+          </article>
+          <article class="topic-card">
+            <span class="topic-index">02</span>
+            <h3>Coś swojego</h3>
+            <p>Jak przejść od pomysłu do pierwszego klienta i nie utknąć w wiecznym ulepszaniu produktu.</p>
+          </article>
+          <article class="topic-card">
+            <span class="topic-index">03</span>
+            <h3>Biznes</h3>
+            <p>Sprzedaż, klienci, pieniądze, ludzie i decyzje, których nikt nie uczył nas na studiach technicznych.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section">
+      <div class="wrap">
+        <div class="section-heading">
+          <p class="eyebrow">05 / YOUTUBE</p>
+          <h2>Ostatnio na YouTube</h2>
+        </div>
+        <div id="videos" class="video-grid" aria-live="polite"></div>
+        <div class="section-note">
+          <a class="button secondary" href="yt">Zobacz wszystkie na YouTube →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section compact">
+      <div class="wrap">
+        <div class="consultation-box">
+          <div>
+            <p class="eyebrow">06 / KONSULTACJA</p>
+            <h2>Masz problem do rozgryzienia?</h2>
+            <p class="lead" style="margin: 0;">Etat czy coś swojego? Manager czy ekspert? Masz pomysł, ale nie wiesz, czy rzeczywiście ma sens?</p>
+            <p class="lead" style="margin-top: 12px;"><strong>Możemy usiąść nad tym razem.</strong></p>
+            <div class="consultation-meta">Jednorazowa konsultacja · 60 minut · bezpłatnie</div>
+          </div>
+          <div>
+            <p class="lead" style="margin: 0;">Rozłożymy problem na części, zakwestionujemy założenia, uporządkujemy opcje i poszukamy następnego konkretnego ruchu.</p>
+            <div class="cta-row" style="margin-top: 22px;">
+              <a class="button primary" href="konsultacja/">Zobacz, jak wygląda konsultacja →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div>
+        <strong>Między nami inżynierami</strong>
+      </div>
+      <div class="footer-links">
+        <a href="./">Home</a>
+        <a href="yt">YouTube</a>
+        <a href="konsultacja/">Skonsultuj się</a>
+        <a href="https://www.linkedin.com/in/michalguzowski/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="privacy/">Polityka prywatności</a>
+      </div>
+      <div>© 2026 Mike Guzowski</div>
+    </div>
+  </footer>
+
   <script>
-    window.location.replace("miedzynamiinzynierami/");
+    const videos = [
+      {
+        title: 'Czy warto zostać managerem? O decyzjach, których nie da się dobrze "rozwalić" samemu',
+        description: 'Rozmowa o roli, odpowiedzialności i tym, kiedy technologia przestaje być jedynym wyznacznikiem sukcesu.',
+        thumbnail: 'https://i.ytimg.com/vi/ujn9A8m0cC0/hqdefault.jpg',
+        url: 'https://www.youtube.com/watch?v=ujn9A8m0cC0'
+      },
+      {
+        title: 'Nie chcę już być programistą — co dalej? Jak zrozumieć, że twoja kariera zaczyna się w innym miejscu',
+        description: 'O zmianie roli, przewartościowaniu kompetencji i decyzjach, które robią różnicę w dłuższej perspektywie.',
+        thumbnail: 'https://i.ytimg.com/vi/ZGsv-9fNQ8Q/hqdefault.jpg',
+        url: 'https://www.youtube.com/watch?v=ZGsv-9fNQ8Q'
+      },
+      {
+        title: 'Jak budować coś swojego, nie robiąc z siebie „technicznego perfekcjonisty”',
+        description: 'Praktyczny komentarz o walidacji pomysłu, pierwszym kliencie i tym, co naprawdę ma znaczenie.',
+        thumbnail: 'https://i.ytimg.com/vi/6LQ5bU2dP3Y/hqdefault.jpg',
+        url: 'https://www.youtube.com/watch?v=6LQ5bU2dP3Y'
+      }
+    ];
+
+    const container = document.getElementById('videos');
+    if (container) {
+      container.innerHTML = videos.map(video => `
+        <article>
+          <a class="video-card" href="${video.url}" target="_blank" rel="noreferrer noopener">
+            <img class="video-thumb" src="${video.thumbnail}" alt="Miniatura filmu: ${video.title}">
+            <div class="video-copy">
+              <h3>${video.title}</h3>
+              <p>${video.description}</p>
+            </div>
+          </a>
+        </article>
+      `).join('');
+    }
   </script>
 </body>
 </html>
