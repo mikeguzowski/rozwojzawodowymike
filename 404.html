@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Przekierowanie</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, sans-serif; }
+    body { display: grid; min-height: 100vh; margin: 0; place-items: center; background: #fbfaf7; color: #17263d; }
+    main { max-width: 34rem; padding: 2rem; text-align: center; }
+    a { color: #1769aa; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Nie znaleziono strony</h1>
+    <p>Za chwilę wrócisz na stronę główną.</p>
+    <p><a href="/">Przejdź na stronę główną</a></p>
+  </main>
+  <script>
+    const requestedPath = decodeURIComponent(location.pathname).replace(/\/+$/, "") || "/";
+
+    fetch("/redirects.json", { cache: "no-store" })
+      .then((response) => {
+        if (!response.ok) throw new Error("Nie udało się pobrać mapy przekierowań.");
+        return response.json();
+      })
+      .then((redirects) => {
+        const target = redirects[requestedPath];
+        if (!target || !/^https?:\/\//i.test(target)) throw new Error("Brak przekierowania.");
+        location.replace(target);
+      })
+      .catch(() => {
+        window.setTimeout(() => location.replace("/"), 2500);
+      });
+  </script>
+</body>
+</html>
